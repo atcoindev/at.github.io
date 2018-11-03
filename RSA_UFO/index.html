@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>RSA UFO</title>
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Anoncoin(ANC) is a unique decentralized peer to peer internet cryptocurrency that provides for its users. I2P and Tor compatible, it is resistant to crackdowns from hostile authorities.  ">
+    <meta name="description" content="Atcoin(ANC) is a unique decentralized peer to peer internet cryptocurrency that provides for its users. I2P and Tor compatible, it is resistant to crackdowns from hostile authorities.  ">
     <meta name="keywords" content="" /> 
     <link rel="canonical" href="https://anoncoin.net/RSA_UFO/">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
@@ -37,7 +37,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Anoncoin</a>
+            <a class="navbar-brand" href="/">Atcoin</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -45,26 +45,26 @@
             <ul class="nav navbar-nav">
                     
                 <li class="dropdown ">
-                    <a href="/About_Anoncoin/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    <a href="/About_Atcoin/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                         aria-expanded="false">About
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
                          
                         <li>
-                            <a href="/About_Anoncoin/">About Anoncoin</a>
+                            <a href="/About_Atcoin/">About Atcoin</a>
                         </li>
                           
                         <li>
-                            <a href="/Anoncoin_in_the_news/">Atcoinin the news</a>
+                            <a href="/Atcoin_in_the_news/">Atcoinin the news</a>
                         </li>
                           
                         <li>
-                            <a href="/Anoncoin_development_team/">Atcoindevelopment team</a>
+                            <a href="/Atcoin_development_team/">Atcoindevelopment team</a>
                         </li>
                           
                         <li>
-                            <a href="https://github.com/Anoncoin/project/tree/master/roadmap">Roadmap</a>
+                            <a href="https://github.com/Atcoin/project/tree/master/roadmap">Roadmap</a>
                         </li>
                           
                         <li>
@@ -144,7 +144,7 @@
                         <li role="separator" class="divider"></li>
                           
                         <li>
-                            <a href="/Places_that_accept_Anoncoin/">Places that accept Anoncoin</a>
+                            <a href="/Places_that_accept_Atcoin/">Places that accept Atcoin</a>
                         </li>
                          
                     </ul>
@@ -166,7 +166,7 @@
                         </li>
                           
                         <li>
-                            <a href="https://www.reddit.com/r/Anoncoin/">Reddit</a>
+                            <a href="https://www.reddit.com/r/Atcoin/">Reddit</a>
                         </li>
                           
                         <li>
@@ -178,7 +178,7 @@
                         </li>
                           
                         <li>
-                            <a href="https://www.facebook.com/Anoncoin/">Facebook page</a>
+                            <a href="https://www.facebook.com/Atcoin/">Facebook page</a>
                         </li>
                          
                     </ul>
@@ -212,7 +212,7 @@
 
 <p>The number of integers depends on the chosen probability p. For example, if p is chosen to be (1 - 10^-9) (meaning there is a one in a billion chance of being insecure) and k is chosen to be 1024 bits (meaning the resulting RSA UFO has to have at least two distinct prime factors of at least 1024 bits each), then L = log (1-p) / log (1 - 0.16) ~ 119 integers a<sub>i</sub> are required. The total bit length of the resulting RSA UFO is roughly 3*k*L ~ 3*1024*119 = 365568 bits.</p>
 
-<h2 id="anoncoins-improvements-on-the-sander-rsa-ufo-concept">Anoncoin’s improvements on the Sander RSA UFO concept</h2>
+<h2 id="anoncoins-improvements-on-the-sander-rsa-ufo-concept">Atcoin’s improvements on the Sander RSA UFO concept</h2>
 
 <p>Since it is completely impractical to have a 365000-bit accumulator modulus for Zerocoin, the Atcoinproject found it necessary to make two changes to Sander’s RSA UFO concept. The first change is to skip the multiplication step at the end and have <em>multiple accumulator moduli</em>, requiring a coin to be accumulated in all of them to be valid; this has equivalent security but much greater efficiency and allows parallel calculation.</p>
 
@@ -224,11 +224,11 @@
 
 <h2 id="generation-of-rsa-ufos">Generation of RSA UFOs</h2>
 
-<p>As part of the RSA UFO selection to meet Anoncoin’s security definition for an integer (see above), all small prime factors less than roughly 165 bits were removed from the RSA UFOs using the Elliptic Curve Method of factorization (ECM), which helps decrease the computational cost of Zerocoin operations; this distributed factorization project was called the “UFO project”; it lasted about 75 days, with a total of 8 core-years spent factoring in those 75 days. By removing small factors, the bit length of the number N decreases; if after removing small factors the bit length is smaller than a critical value of about 3456 bits (90% of 3840 bits), or if the remaining number is a prime (which means the UFO candidate has been completely factorized), the RSA UFO is discarded, and another one is generated. The results of the UFO project are discussed <a href="https://bitcointalk.org/index.php?topic=227287.msg8855999#msg8855999">here</a>.</p>
+<p>As part of the RSA UFO selection to meet Atcoin’s security definition for an integer (see above), all small prime factors less than roughly 165 bits were removed from the RSA UFOs using the Elliptic Curve Method of factorization (ECM), which helps decrease the computational cost of Zerocoin operations; this distributed factorization project was called the “UFO project”; it lasted about 75 days, with a total of 8 core-years spent factoring in those 75 days. By removing small factors, the bit length of the number N decreases; if after removing small factors the bit length is smaller than a critical value of about 3456 bits (90% of 3840 bits), or if the remaining number is a prime (which means the UFO candidate has been completely factorized), the RSA UFO is discarded, and another one is generated. The results of the UFO project are discussed <a href="https://bitcointalk.org/index.php?topic=227287.msg8855999#msg8855999">here</a>.</p>
 
 <p>On startup all Atcoinwallet software deterministically generates the raw UFOs using hashing. The small factors found during the UFO project are then removed from the raw UFOs. (It would have been more efficient to have the final UFOs encoded directly in the software, but that would have the disadvantage of being less verifiable by code reviewers.) So the procedure to generate the complete RSA UFOs is 1) create the 13 “raw” UFOs by hashing, and 2) divide out the small factors found in the UFO project. If the RSA UFO bit length after division by small factors is lower than 3456, the UFO is discarded and the next UFO is generated, to bring the total number of UFO candidates back up to 13. Out of the 13 starting UFOs with index 0-12, we rejected UFOs with indices 5 and 7 because they were completely factorized, and rejected the UFO with index 13 because the bit length dropped below the 3456 bit threshold; as a result, three more UFOs were added to set being factorized (those with indices 13-15). The end result is that we had 13 UFOs with index 0 through 15 except 5, 7, and 13. This same process was performed identically and deterministically by the UFO clients and UFO server, and, after Zerocoin is released, by all Atcoinwallets (except that wallets use only the factors found in the UFO project, and do not perform any factorization).</p>
 
-<p>The <a href="https://github.com/Anoncoin/ufo_client">client source code</a> and <a href="https://github.com/Gnos1s/ufo_server">server source code</a> can be accessed on GitHub.</p>
+<p>The <a href="https://github.com/Atcoin/ufo_client">client source code</a> and <a href="https://github.com/Gnos1s/ufo_server">server source code</a> can be accessed on GitHub.</p>
 
 <h2 id="ufo-project-statistics">UFO project statistics</h2>
 <p><img src="/img/L2eYp9A.png" alt="Img" />
@@ -285,13 +285,13 @@
                         </li>
                         
                         <li>
-                            <a href="https://www.facebook.com/Anoncoin/" class="btn-social btn-outline">
+                            <a href="https://www.facebook.com/Atcoin/" class="btn-social btn-outline">
                                 <i class="fa fa-fw fa-facebook"></i>
                             </a>
                         </li>
                         
                         <li>
-                            <a href="https://www.reddit.com/r/Anoncoin/" class="btn-social btn-outline">
+                            <a href="https://www.reddit.com/r/Atcoin/" class="btn-social btn-outline">
                                 <i class="fa fa-fw fa-reddit"></i>
                             </a>
                         </li>
@@ -303,7 +303,7 @@
                         </li>
                         
                         <li>
-                            <a href="https://github.com/Anoncoin/anoncoin" class="btn-social btn-outline">
+                            <a href="https://github.com/Atcoin/anoncoin" class="btn-social btn-outline">
                                 <i class="fa fa-fw fa-github"></i>
                             </a>
                         </li>
