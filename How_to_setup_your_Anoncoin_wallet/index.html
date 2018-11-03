@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>How to setup your Anoncoin wallet</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Anoncoin(ANC) is a unique decentralized peer to peer internet cryptocurrency that provides for its users. I2P and Tor compatible, it is resistant to crackdowns from hostile authorities.  ">
+    <meta name="keywords" content="" /> 
+    <link rel="canonical" href="https://anoncoin.net/How_to_setup_your_Anoncoin_wallet/">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+
+    <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link rel="stylesheet" href=" /style.css ">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href=" /css/font-awesome/css/font-awesome.min.css ">
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+    <body id="page-top" class="index">
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-dropping">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Anoncoin</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <nav id="navbar-dropping" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                    
+                <li class="dropdown ">
+                    <a href="/About_Anoncoin/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">About
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                         
+                        <li>
+                            <a href="/About_Anoncoin/">About Anoncoin</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Anoncoin_in_the_news/">Anoncoin in the news</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Anoncoin_development_team/">Anoncoin development team</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://github.com/Anoncoin/project/tree/master/roadmap">Roadmap</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Donate/">Donate</a>
+                        </li>
+                         
+                    </ul>
+                </li>
+                    
+                <li class="dropdown ">
+                    <a href="/Download/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Downloads
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                         
+                        <li>
+                            <a href="/Download/#windowsdownload">Windows</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Download/#macdownload">Mac</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Download/#linuxdownload">Linux</a>
+                        </li>
+                         
+                    </ul>
+                </li>
+                    
+                <li class="dropdown ">
+                    <a href="/Blog/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Resources
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                         
+                        <li>
+                            <a href="/Blog/">Blog</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/FAQ/">FAQ</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Wiki/">Wiki</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/How_to_guides/">How to guides</a>
+                        </li>
+                         
+                    </ul>
+                </li>
+                    
+                <li class="dropdown ">
+                    <a href="/Exchanges/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Services
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                         
+                        <li>
+                            <a href="/Exchanges/">Exchanges</a>
+                        </li>
+                          
+                        <li>
+                            <a href="http://anoncash.net">Blockchain explorer</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Mining_pools/">Mining pools</a>
+                        </li>
+                          
+                        <li role="separator" class="divider"></li>
+                          
+                        <li>
+                            <a href="/Places_that_accept_Anoncoin/">Places that accept Anoncoin</a>
+                        </li>
+                         
+                    </ul>
+                </li>
+                    
+                <li class="dropdown ">
+                    <a href="/Community/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Community
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                         
+                        <li>
+                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU">Slack</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://bitcointalk.org/index.php?topic=227287.0">Bitcointalk</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://www.reddit.com/r/Anoncoin/">Reddit</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCwKSmUNcoRrBwm-kdsl1n2w">YouTube</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://twitter.com/anoncoinproject">Official Twitter</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://www.facebook.com/Anoncoin/">Facebook page</a>
+                        </li>
+                         
+                    </ul>
+                </li>
+                 
+            </ul>
+        </nav>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+    <!-- About Section -->
+<section class="article" id="about"></section>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1>How to setup your Anoncoin wallet</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <p>
+
+    
+
+    <p>Downloading the Anoncoin client and setting up your personal wallet for the first time is simple. Just follow the steps below and you will be up and running in no-time.</p>
+
+<h2 id="download-the-anoncoin-client">Download the Anoncoin client</h2>
+
+<p>Choose one of the the following options below.</p>
+
+<h3 id="ms-windows">MS Windows</h3>
+
+<p>You can choose execute the setup.exe from the <a href="https://github.com/Anoncoin/anoncoin/releases/download/5e441d8/anoncoin-9.6.13.win64.zip">extractable zip file</a> to be run from the directory, or just run the included <a href="https://github.com/Anoncoin/anoncoin/releases/download/5e441d8/anoncoin-9.6.13.win64.zip">anoncoind daemon</a> if you won’t be using the QT graphic user interface.</p>
+
+<h3 id="mac-os-x">Mac OS X</h3>
+
+<p>This only comes in one flavor. The [ disk volume (dmg) file] contains all the files needed to run Anoncoin in a single package.</p>
+
+<h3 id="linux">Linux</h3>
+
+<p>Clone the master from <a href="https://github.com/Anoncoin/anoncoin">the git repository</a>, it contains all the source files needed to compile your own binaries. How to guide is here <a href="/How_to_build_Anoncoin_from_source/">How_to_build_Anoncoin_from_source</a>. Binaries are in the works for multiple Linux distributions.</p>
+
+<h3 id="source-code">Source Code</h3>
+
+<p>Obtain the Anoncoin source code by <a href="https://github.com/Anoncoin/anoncoin">cloning the git repository</a>.</p>
+
+<h2 id="setting-up-your-client-to-use-i2p-9613">Setting up your client to use I2P (9.6.13)</h2>
+
+<p>Build the Anoncoin master 9.6.13 from source (<a href="/How_to_build_Anoncoin_from_source/">How_to_build_Anoncoin_from_source</a>).</p>
+
+<p>Alternatively, you can download the master version (19/06/2017) here: <a href="https://github.com/Anoncoin/anoncoin/releases/tag/5e441d8">https://github.com/Anoncoin/anoncoin/releases/tag/5e441d8</a></p>
+
+<p>If there was a previous installation of Anoncoin 8.5.6, delete everything in anoncoin data directory <strong>BUT KEEP WALLET.DAT</strong> (the data directory is exemplified in the next link about bootstrap).</p>
+
+<p>Download and install java <a href="/I2P/">I2P</a> following <a href="/How_to_install_and_use_I2P/">How_to_install_and_use_I2P</a></p>
+
+<p>Install Anoncoin following this guide <a href="/How_to_install_Anoncoin/">How to install Anoncoin</a>.</p>
+
+<p>Then download and copy the file <code class="highlighter-rouge">bootstrap.dat</code> in the anoncoin data directory (<a href="/How_to_use_a_bootstrap_file_to_speed_up_initial_synchronization/">How to use a bootstrap file to speed up initial synchronization</a>).</p>
+
+<p>Then copy/paste the sample <code class="highlighter-rouge">anoncoin.conf</code> for the 9.6.12 version in your data directory. It is found in the folder anoncoin/doc.</p>
+
+<p>and go at <a href="http://127.0.0.1:7657/configclients">http://127.0.0.1:7657/configclients</a>, activate SAM application bridge and make it run at startup, save the configuration.</p>
+
+<p><img src="/img/Configi2p.PNG" alt="Image" /></p>
+
+<p>Then after 5 min, allowing time for the SAM application bridge to launch, start Anoncoin-qtc 9.6.12 with the following command (or run the “Generate I2P static privatekey” shortcut on windows):</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anoncoin-qtc -i2p.options.enabled=1 -onlynet=i2p -generatei2pdestination
+</code></pre></div></div>
+
+<p>To run in I2P only mode, without anoncoin.conf file, execute (or run the “Anoncoin Core I2P-only” shortcut on windows):</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anoncoin-qtc -i2p.options.enabled=1 -onlynet=i2p
+</code></pre></div></div>
+
+<p>The I2P address generated above will be used unless another one is specified in anoncoin.conf.</p>
+
+<p>You can also alternativelly go in the menu <code class="highlighter-rouge">settings-options-I2P-generate_I2P_address</code> and copy this key to anoncoin.conf.</p>
+
+<p><img src="/img/I2pdetail.png" alt="Image" /></p>
+
+<p>Click on <code class="highlighter-rouge">copy </code>“<code class="highlighter-rouge">mydestination</code>”<code class="highlighter-rouge"> parameter to the clipboard</code>, edit the <code class="highlighter-rouge">anoncoin.conf</code> in your data dir and paste the string in the <code class="highlighter-rouge">anoncoin.conf</code> at the following location:</p>
+
+<p><code class="highlighter-rouge">privatekey=</code></p>
+
+<p>Be sure to remove the # of this line too.</p>
+
+<p>Do the same with public address and B32 address. Then change in <code class="highlighter-rouge">i2p.options</code> to <code class="highlighter-rouge">static=1</code></p>
+
+<p>It shall look like this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[i2p.mydestination]      #do not comment the line with []
+privatekey=OqCg43bXytCJv*****AAAA****long****
+ 
+[i2p.options]
+enabled=1
+static=1                 #Change it to 1 to use [i2p.mydestination] addresses after they are generated and copied above 
+samhost=127.0.0.1      #Change it to i2pd or java i2p host local IP (127.0.0.1 or 192.168.1.5 for instance) 
+samport=7656
+</code></pre></div></div>
+
+<p>Let the wallet finish to synch (it takes two or three hours normally) then close it and restart, now you are running an I2P-only anoncoin wallet with a static address! :)</p>
+
+<h2 id="using-the-command-line-to-generate-a-random-anoncoin-address-and-run-anoncoind-with-i2p">Using the command line to generate a random anoncoin address and run anoncoind with I2P</h2>
+
+<p>Install I2P from the PPA repository <a href="https://geti2p.net/en/download/debian#ubuntu">1</a> and run the i2p router.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>i2prouter start
+</code></pre></div></div>
+
+<p>Wait 5 minutes for initialisation of the I2P SAM bridge and in anoncoin/src type:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./anoncoind -i2p.options.enabled=1 -onlynet=i2p -generatei2pdestination
+</code></pre></div></div>
+
+<p>All the data that are needed to setup the <code class="highlighter-rouge">.anoncoin/anoncoin.conf</code> will be printed as a result:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>user@ubuntu:~/anoncoin/src$ ./anoncoind -i2p.options.enabled=1 -onlynet=i2p -generatei2pdestination
+Anoncoin server starting
+user@ubuntu:~/anoncoin/src$ Generated I2P Destination: 
+To have a permanent I2P Destination address, you have to set options in anoncoin.conf:
+Your Config file is: /home/yo/.anoncoin/anoncoin.conf
+Your I2P Destination Private Key anoncoin.conf file settings are:
+[i2p.mydestination]
+static=1
+privatekey=apuLsXH2KdmTV******AAAA****long****
+[i2p.options]
+enabled=1
+****** Save the above text at the end of your configuration file and keep it secret.
+      Or start with our anoncoin.conf.sample file, which has even more settings.
+This is your I2P Public Key:
+apuLsXH2KdmTVUgY-PIJcRyVEOExQCmX4-1olVrOg1g5adVW~DQX9wfwXEMVZTPQn9FqyaU2vrvgXsJuQEECRWGewf4DIylJG9dn-ac6N9LniTbWmbSNyWDOv54qc4yO3LeHyp3Gm2UvaSpdmjXQ0PnLirWXo-HxmvTpD~UunIraX4SRZcijNzBG6jYAdjp8-sTq17kjb9S3Ar33UmJR0G9ir4UrY93zKvUojiylLpNrJKeBkp4YB2RurXkwy6zHt2mavhae7~sKa0YfXcn-ZnUIVbIp~KC~dxhEO~L6VBsbtfki-4M1xRn39~ygI0Y-Ca2nSDgRsEZ9bi8uUbBQgYzSZfsDzAgUNWcQHYZHHX39cP-S8Du~yU4Ioy3cC~pa31Inv3RcfR9ZX1qxrBsPiDEdgtfvbO1ahNxgeTVnhYg-6n--jxqLDEI1rOpzFJD0yHfNKcjeJ5nKq5cwFBRjeAlBKGNmHioILIOcz48Woq1OQdnfthA6zDGEfnwmN~eYAAAA
+**** You can advertise the Public Key, all I2P Routers will know how to locate it.
+Your personal b32.i2p Destination:
+5oo3enrz7fp77ojrfk7hjsniohsxqmhuxdhdx6ur7iwumsrjzkwq.b32.i2p
+** Anoncoin peers now have built-in name resolution, once your on I2P for a few hours,
+  most peers will likely be able to find you by this Base32 hash of the Public Key.
+  Standard I2P network Routers are not as likely to find your destination with it.
+</code></pre></div></div>
+
+<p>The generated privatekey was automatically saved in I2Pkey.dat. Now you can start anoncoin using this static I2P destination by using this command:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./anoncoind -i2p.options.enabled=1 -onlynet=i2p
+</code></pre></div></div>
+
+<p>Alternatively, you can edit your own <code class="highlighter-rouge">anoncoin.conf</code> and add the privatekey and static in [i2p.mydestination]</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cp ../doc/anoncoin.conf.sample ~/.anoncoin/anoncoin.conf
+nano ~/.anoncoin/anoncoin.conf
+</code></pre></div></div>
+
+<h2 id="see-also">See also</h2>
+
+<ul>
+  <li><a href="/How_to_setup_Anoncoin_to_use_Tor/">How to setup Anoncoin to use Tor</a></li>
+  <li><a href="/Securing_your_wallet/">Securing your wallet</a></li>
+  <li><a href="/How_to_use_a_bootstrap_file_to_speed_up_initial_synchronization/">How to use a bootstrap file to speed up initial synchronization</a></li>
+</ul>
+
+    <p class="spacer"></p>
+    </div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="text-center">
+    <div class="footer-above">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col col-md-4">
+                    <h3>Contact</h3>
+                    <p>
+                         info@anoncoin.net
+                        <br> 
+                    </p>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h3>Around the Web</h3>
+                    <ul class="list-inline">
+                        
+                        <li>
+                            <a href="https://twitter.com/anoncoinproject" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-twitter"></i>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.facebook.com/Anoncoin/" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-facebook"></i>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.reddit.com/r/Anoncoin/" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-reddit"></i>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCwKSmUNcoRrBwm-kdsl1n2w" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-youtube"></i>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://github.com/Anoncoin/anoncoin" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-github"></i>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h3>Chat with us</h3>
+                    <p>
+                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU
+                            " class="btn btn-lg btn-outline">
+                                <i class="fa fa-slack"></i> Join our Slack
+                            </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-below">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    Copyright &copy; Anoncoin 2018
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-top page-scroll visible-xs visible-sm">
+    <a class="btn btn-primary" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+</div>
+
+    <!-- jQuery Version 1.11.0 -->
+<script src=" /js/jquery-1.11.0.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src=" /js/bootstrap.min.js "></script>
+
+<!-- Plugin JavaScript -->
+<script src=" /js/jquery.easing.min.js "></script>
+<script src=" /js/classie.js "></script>
+<script src=" /js/cbpAnimatedHeader.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src=" /js/freelancer.js "></script> 
+    </body>
+</html>

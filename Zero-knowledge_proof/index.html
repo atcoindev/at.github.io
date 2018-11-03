@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Zero-knowledge proof</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Anoncoin(ANC) is a unique decentralized peer to peer internet cryptocurrency that provides for its users. I2P and Tor compatible, it is resistant to crackdowns from hostile authorities.  ">
+    <meta name="keywords" content="" /> 
+    <link rel="canonical" href="https://anoncoin.net/Zero-knowledge_proof/">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+
+    <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link rel="stylesheet" href=" /style.css ">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href=" /css/font-awesome/css/font-awesome.min.css ">
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+    <body id="page-top" class="index">
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-dropping">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Anoncoin</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <nav id="navbar-dropping" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                    
+                <li class="dropdown ">
+                    <a href="/About_Anoncoin/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">About
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                         
+                        <li>
+                            <a href="/About_Anoncoin/">About Anoncoin</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Anoncoin_in_the_news/">Anoncoin in the news</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Anoncoin_development_team/">Anoncoin development team</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://github.com/Anoncoin/project/tree/master/roadmap">Roadmap</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Donate/">Donate</a>
+                        </li>
+                         
+                    </ul>
+                </li>
+                    
+                <li class="dropdown ">
+                    <a href="/Download/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Downloads
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                         
+                        <li>
+                            <a href="/Download/#windowsdownload">Windows</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Download/#macdownload">Mac</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Download/#linuxdownload">Linux</a>
+                        </li>
+                         
+                    </ul>
+                </li>
+                    
+                <li class="dropdown ">
+                    <a href="/Blog/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Resources
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                         
+                        <li>
+                            <a href="/Blog/">Blog</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/FAQ/">FAQ</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Wiki/">Wiki</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/How_to_guides/">How to guides</a>
+                        </li>
+                         
+                    </ul>
+                </li>
+                    
+                <li class="dropdown ">
+                    <a href="/Exchanges/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Services
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                         
+                        <li>
+                            <a href="/Exchanges/">Exchanges</a>
+                        </li>
+                          
+                        <li>
+                            <a href="http://anoncash.net">Blockchain explorer</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Mining_pools/">Mining pools</a>
+                        </li>
+                          
+                        <li role="separator" class="divider"></li>
+                          
+                        <li>
+                            <a href="/Places_that_accept_Anoncoin/">Places that accept Anoncoin</a>
+                        </li>
+                         
+                    </ul>
+                </li>
+                    
+                <li class="dropdown ">
+                    <a href="/Community/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Community
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                         
+                        <li>
+                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU">Slack</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://bitcointalk.org/index.php?topic=227287.0">Bitcointalk</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://www.reddit.com/r/Anoncoin/">Reddit</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCwKSmUNcoRrBwm-kdsl1n2w">YouTube</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://twitter.com/anoncoinproject">Official Twitter</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://www.facebook.com/Anoncoin/">Facebook page</a>
+                        </li>
+                         
+                    </ul>
+                </li>
+                 
+            </ul>
+        </nav>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+    <!-- About Section -->
+<section class="article" id="about"></section>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1>Zero-knowledge proof</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <p>
+    <font color="red"><i>
+    This is an old archived article with out of date content.
+    </i></font>
+    <p>A <strong>zero-knowledge proof</strong> is a method by which one party can prove to another that a given statement is true, without conveying any additional information apart from the fact that the statement is indeed true. In the Zerocoin protocol, zero-knowledge proofs are used in the process of redeeming previously minted zerocoins for anoncoins. The proof shows that the party previously minted a zerocoin, without making known which zerocoin was minted.</p>
+
+<h2 id="non-interactive-zero-knowledge-proof-of-knowledge">Non Interactive Zero Knowledge Proof of Knowledge</h2>
+
+<p>A simple example of a zero-knowledge proof is the proof of knowledge of a discrete logarithm. Given an equation of the form</p>
+
+<p><em>y</em> = <em>g</em><sup><em>x</em></sup> mod <em>q</em></p>
+
+<p>where the integers <em>y</em>, <em>g</em> and <em>q</em> are known, it is wished to prove knowledge of the discrete logarithm <em>x</em>. When <em>q</em> is a large prime number, the computation of the discrete logarithm is mathematically difficult, and no efficient solution exists. The proof of knowledge of <em>x</em> is here formulated in the framework of the multiplicative group of integers modulo <em>q</em>, <strong>Z</strong><sub><em>q</em></sub>. The elements of the group <em>G</em> of order <em>q</em> are numerated from 0 to <em>q</em>-1, with <em>g</em><sup><em>q</em></sup> = 1. When a value exceeds <em>q</em>, it is simply replaced with its value modulo <em>q</em>.</p>
+
+<p>The proof that Zerocoin uses is a ‘non-interactive proof’ because the party provides all information necessary to verify the proof. This is in contrast to interactive proofs, where the verifier must send information to the party as part of a three-stage verification process. In mathematical notation, non-interactive zero-knowledge proofs of knowledge can be denoted as</p>
+
+<p>NIZKPoK{(<em>x</em>), <em>h</em> = <em>g</em><sup><em>x</em></sup>}</p>
+
+<p>where all values not in parentheses are assumed known to the verifier.</p>
+
+<p>Proof of knowledge of the discreet logarithm <em>x</em> can be proved without divulging its value using the following Schnorr protocol.</p>
+
+<ol>
+  <li>Choose a random integer <em>r</em> between 0 and <em>q</em>-1.</li>
+  <li>Calculate <em>t</em> = <em>g</em><sup><em>r</em></sup>. This is referred to as the commitment.</li>
+  <li>Compute the hash of <em>t</em>, <em>c</em> = <em>H</em>(<em>t</em>) mod <em>q</em>. (If a non-interactive proof were being used, the verifier would instead provide a random number <em>c</em>, and <em>c</em> would be the ‘challenge’.)</li>
+  <li>Calculate <em>s</em> = <em>xc</em> + <em>r</em> (mod <em>q</em>).</li>
+  <li>The prover sends (<em>t</em>, <em>s</em>) to the verifier.</li>
+  <li>The verifier accepts the proof if <em>g</em><sup><em>s</em></sup> = <em>t</em> <em>y</em><sup><em>c</em></sup>.</li>
+</ol>
+
+<p>The last step is easily proved, since <em>g</em><sup><em>xc</em>\ +\ <em>r</em></sup> = <em>g</em><sup><em>r</em></sup> (<em>g</em><sup><em>x</em></sup>)<sup><em>c</em></sup>. The probability of the party fooling the verifier that they know <em>x</em> is 1/<em>q</em>.</p>
+
+<h2 id="application-to-zerocoin">Application to Zerocoin</h2>
+
+<p>A zerocoin <em>c</em> is defined by the equation</p>
+
+<p><em>c</em> = <em>g</em><sup><em>S</em></sup> <em>h</em><sup><em>r</em></sup> mod <em>p</em></p>
+
+<p>where the integers <em>g</em>, <em>h</em>, and <em>p</em> are setup parameters known to all, and where the serial number <em>S</em> and random number <em>r</em> are known only to the owner of the coin. The coin <em>c</em> is a <a href="/Commitment_scheme/" title="wikilink">Pedersen commitment</a> that must be a prime number.</p>
+
+<p>As part of the Zerocoin protocol, all of the coins are <a href="/Cryptographic_accumulator/" title="wikilink">‘accumulated’</a> into the value <em>A</em> by an equation of the form</p>
+
+<p><em>A</em> = <em>u</em><sup>c<sub>1</sub>\ c<sub>2</sub>\ c<sub>3</sub>\ …\ c\ …\ c<sub>n</sub></sup> (mod N)</p>
+
+<p>where the integers <em>A</em>, <em>u</em> and <em>N</em> are known to everyone. The witness <em>w</em> of a coin <em>c</em> is defined as the accumulation of all coins with the exception of <em>c</em></p>
+
+<p><em>w</em> = <em>u</em><sup>c<sub>1</sub>\ c<sub>2</sub>\ c<sub>3</sub>\ …\ c<sub>n</sub></sup> (mod N).</p>
+
+<p>Given <em>A</em>, <em>w</em>, and <em>v</em>, it can be verified that the coin <em>v</em> was accumulated in <em>A</em> if</p>
+
+<p><em>A</em>’ = <em>w</em><sup><em>v</em></sup> mod <em>N</em> = <em>A</em>.</p>
+
+<p>When this is satisfied, the function AccVerify((N,u),A,c,w) is set to unity.</p>
+
+<p>To prove ownership of a Zerocoin, one must provide the serial number <em>S</em>, and prove knowledge of one coin <em>c</em> and the random number <em>r</em> used to generate the coin, without divulging the value of either. This is done by two separate zero-knowledge proofs, denoted schematically by the equation</p>
+
+<p>NIZKPoK{(<em>c</em>, <em>w</em>, <em>r</em>), AccVerify((N,u),A,c,w) = 1, and <em>c</em> = <em>g</em><sup><em>S</em></sup><em>h</em><sup><em>r</em></sup>}.</p>
+
+<p>A <a href="/Zero-knowledge_proof/" title="wikilink">zero-knowledge proof</a> for knowledge of the coin <em>c</em> and witnesss <em>w</em> is given by Camenisch and Lysyanskaya (2002). The zero-knowledge proof for knowledge of <em>c</em> and <em>r</em> is given by Miers et al. (2013).</p>
+
+<h2 id="see-also">See also</h2>
+
+<ul>
+  <li><a href="/Commitment_scheme/" title="wikilink">Commitment scheme</a></li>
+  <li><a href="/Cryptographic_accumulator/" title="wikilink">Cryptographic accumulator</a></li>
+</ul>
+
+<h2 id="references">References</h2>
+
+<p>Camenisch, J., and A. Lysyanskaya (2002). <a href="http://cs.brown.edu/people/anna/papers/camlys02.pdf">Dynamic Accumulators and Application to Efficient Revocation of Anonymous Credentials</a>, CRYPTO 2002, LNCS 2442, pp. 61–76.</p>
+
+<p>Garman, C., M. Green, I. Miers, and A. D. Rubin (2013). Rational Zero: Economic Security for Zerocoin with Everlasting Anonymity. In: JHUDCS.</p>
+
+<p>Goldreich, O., Micali, S., Wigderson, A.: Proofs that yield nothing but their validity and a methodology of cryptographic protocol design. In: FOCS (1986).</p>
+
+<p>Goldwasser, S, S. Micali, and C. Rackoff (1985). The knowledge complexity of interactive proof-systems (extended abstract). In 17th Annual ACM Symposium on Theory of Computing (STOC’85), pages 291-304.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Miers, I., C. Garman, M. Green, A. D. Rubin (2013). [<a href="http://spar.isi.jhu.edu/~mgreen/ZerocoinOakland.pdf">http://spar.isi.jhu.edu/~mgreen/ZerocoinOakland.pdf</a></td>
+      <td>Zerocoin: Anonymous Distributed E-Cash from Bitcoin], 2013 IEEE Symposium on Security and Privacy, IEEE Computer Society Conference Publishing Services, pp. 397-411, &lt;doi:10.1109/SP.2013.34&gt;.</td>
+    </tr>
+  </tbody>
+</table>
+
+    <p class="spacer"></p>
+    </div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="text-center">
+    <div class="footer-above">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col col-md-4">
+                    <h3>Contact</h3>
+                    <p>
+                         info@anoncoin.net
+                        <br> 
+                    </p>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h3>Around the Web</h3>
+                    <ul class="list-inline">
+                        
+                        <li>
+                            <a href="https://twitter.com/anoncoinproject" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-twitter"></i>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.facebook.com/Anoncoin/" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-facebook"></i>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.reddit.com/r/Anoncoin/" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-reddit"></i>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCwKSmUNcoRrBwm-kdsl1n2w" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-youtube"></i>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://github.com/Anoncoin/anoncoin" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-github"></i>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h3>Chat with us</h3>
+                    <p>
+                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU
+                            " class="btn btn-lg btn-outline">
+                                <i class="fa fa-slack"></i> Join our Slack
+                            </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-below">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    Copyright &copy; Anoncoin 2018
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-top page-scroll visible-xs visible-sm">
+    <a class="btn btn-primary" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+</div>
+
+    <!-- jQuery Version 1.11.0 -->
+<script src=" /js/jquery-1.11.0.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src=" /js/bootstrap.min.js "></script>
+
+<!-- Plugin JavaScript -->
+<script src=" /js/jquery.easing.min.js "></script>
+<script src=" /js/classie.js "></script>
+<script src=" /js/cbpAnimatedHeader.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src=" /js/freelancer.js "></script> 
+    </body>
+</html>

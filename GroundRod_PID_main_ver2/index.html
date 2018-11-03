@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GroundRod PID main ver2</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Anoncoin(ANC) is a unique decentralized peer to peer internet cryptocurrency that provides for its users. I2P and Tor compatible, it is resistant to crackdowns from hostile authorities.  ">
+    <meta name="keywords" content="" /> 
+    <link rel="canonical" href="https://anoncoin.net/GroundRod_PID_main_ver2/">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+
+    <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link rel="stylesheet" href=" /style.css ">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href=" /css/font-awesome/css/font-awesome.min.css ">
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+    <body id="page-top" class="index">
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-dropping">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Anoncoin</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <nav id="navbar-dropping" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                    
+                <li class="dropdown ">
+                    <a href="/About_Anoncoin/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">About
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                         
+                        <li>
+                            <a href="/About_Anoncoin/">About Anoncoin</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Anoncoin_in_the_news/">Anoncoin in the news</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Anoncoin_development_team/">Anoncoin development team</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://github.com/Anoncoin/project/tree/master/roadmap">Roadmap</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Donate/">Donate</a>
+                        </li>
+                         
+                    </ul>
+                </li>
+                    
+                <li class="dropdown ">
+                    <a href="/Download/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Downloads
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                         
+                        <li>
+                            <a href="/Download/#windowsdownload">Windows</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Download/#macdownload">Mac</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Download/#linuxdownload">Linux</a>
+                        </li>
+                         
+                    </ul>
+                </li>
+                    
+                <li class="dropdown ">
+                    <a href="/Blog/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Resources
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                         
+                        <li>
+                            <a href="/Blog/">Blog</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/FAQ/">FAQ</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Wiki/">Wiki</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/How_to_guides/">How to guides</a>
+                        </li>
+                         
+                    </ul>
+                </li>
+                    
+                <li class="dropdown ">
+                    <a href="/Exchanges/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Services
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                         
+                        <li>
+                            <a href="/Exchanges/">Exchanges</a>
+                        </li>
+                          
+                        <li>
+                            <a href="http://anoncash.net">Blockchain explorer</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Mining_pools/">Mining pools</a>
+                        </li>
+                          
+                        <li role="separator" class="divider"></li>
+                          
+                        <li>
+                            <a href="/Places_that_accept_Anoncoin/">Places that accept Anoncoin</a>
+                        </li>
+                         
+                    </ul>
+                </li>
+                    
+                <li class="dropdown ">
+                    <a href="/Community/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Community
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                         
+                        <li>
+                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU">Slack</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://bitcointalk.org/index.php?topic=227287.0">Bitcointalk</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://www.reddit.com/r/Anoncoin/">Reddit</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCwKSmUNcoRrBwm-kdsl1n2w">YouTube</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://twitter.com/anoncoinproject">Official Twitter</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://www.facebook.com/Anoncoin/">Facebook page</a>
+                        </li>
+                         
+                    </ul>
+                </li>
+                 
+            </ul>
+        </nav>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+    <!-- About Section -->
+<section class="article" id="about"></section>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1>GroundRod PID main ver2</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <p>
+    <font color="red"><i>
+    This is an old archived article with out of date content.
+    </i></font>
+    <p>Here we show the result of 11000+ blocks mining after the hardfork2 on block 585555 using the GroundRod PID Retarget Difficulty Algo featured in the new 0.9.6.12 version of Anoncoin.</p>
+
+<p><a href="https://github.com/Anoncoin/anoncoin/blob/master/src/pow.cpp">https://github.com/Anoncoin/anoncoin/blob/master/src/pow.cpp</a></p>
+
+<p>The PID settings used in mainet after hardfork-block 585555 on 9.6.12 were changed since the 9.6.11 version.</p>
+
+<p><code></code></p>
+
+<p><strong><code class="highlighter-rouge">OLD</code><code class="highlighter-rouge"> </code><code class="highlighter-rouge">parameters</code></strong><code class="highlighter-rouge">                                   </code><strong><code class="highlighter-rouge">New</code><code class="highlighter-rouge"> </code><code class="highlighter-rouge">parameters</code></strong>
+<code class="highlighter-rouge">#define PID_PROPORTIONALGAIN </code>“<code class="highlighter-rouge">1.7</code>”<code class="highlighter-rouge">               PID_PROPORTIONALGAIN </code>“<code class="highlighter-rouge">1.6</code>”
+<code class="highlighter-rouge">#define PID_INTEGRATORTIME </code>“<code class="highlighter-rouge">172800</code>”<code class="highlighter-rouge">              PID_INTEGRATORTIME </code>“<code class="highlighter-rouge">129600</code>”
+<code class="highlighter-rouge">#define PID_INTEGRATORGAIN </code>“<code class="highlighter-rouge">5</code>”<code class="highlighter-rouge">                   PID_INTEGRATORGAIN </code>“<code class="highlighter-rouge">8</code>”
+<code class="highlighter-rouge">#define PID_DERIVATIVEGAIN </code>“<code class="highlighter-rouge">0</code>”<code class="highlighter-rouge">                   PID_DERIVATIVEGAIN </code>“<code class="highlighter-rouge">3</code>”
+<code class="highlighter-rouge">#define TIPFILTERBLOCKS_DEFAULT </code>“<code class="highlighter-rouge">21</code>”<code class="highlighter-rouge">             TIPFILTERBLOCKS_DEFAULT </code>“<code class="highlighter-rouge">21</code>”
+<code class="highlighter-rouge">#define USESHEADER_DEFAULT false                 USESHEADER_DEFAULT false</code>
+<code class="highlighter-rouge">#define NMAXDIFFINCREASE </code>“<code class="highlighter-rouge">200</code>”<code class="highlighter-rouge">                   NMAXDIFFINCREASE </code>“<code class="highlighter-rouge">150</code>”
+<code class="highlighter-rouge">#define NMAXDIFFDECREASE </code>“<code class="highlighter-rouge">170</code>”<code class="highlighter-rouge">                   NMAXDIFFDECREASE </code>“<code class="highlighter-rouge">130</code>”
+<code class="highlighter-rouge">#define DMININTEGRATOR 170                       DMININTEGRATOR 176</code>
+<code class="highlighter-rouge">#define DMAXINTEGRATOR 190                       DMAXINTEGRATOR 195</code>
+<code class="highlighter-rouge">#define WEIGHTEDAVGTIPBLOCKS_UP 4                WEIGHTEDAVGTIPBLOCKS_UP 9</code>
+<code class="highlighter-rouge">#define WEIGHTEDAVGTIPBLOCKS_DOWN 6              WEIGHTEDAVGTIPBLOCKS_DOWN 20</code>
+<code class="highlighter-rouge">const int64_t nTargetSpacing = 180;              nTargetSpacing = 180;</code></p>
+
+<p>&lt;/code&gt;</p>
+
+<ul>
+  <li>Blocktime</li>
+</ul>
+
+<p><img src="/img/9612blocktime.png" alt="Img" /></p>
+
+<ul>
+  <li>Average Blocktime</li>
+</ul>
+
+<p>This is a simple mean above all blocks since block 585555. Here we also see the avg blocktime tending to 188 sec.
+<img src="/img/9612avgblocktime.png" alt="Img" /></p>
+
+<ul>
+  <li>Integral term</li>
+</ul>
+
+<p>The integral term over 36 hours (129600 sec) is doing oscillations when no block are found for a long time. This permit to keep block subsidy as near as possible to the 180 sec/block.
+<img src="/img/9612Intterm.png" alt="Img" /></p>
+
+<ul>
+  <li>PIDOut</li>
+</ul>
+
+<p>The PID output is much more stable than before. Except a spike when no block was found for 5 hours, all is good.
+<img src="/img/9612pidout.png" alt="Img" /></p>
+
+<ul>
+  <li>TipsAvg</li>
+</ul>
+
+<p>TipsAvg is looking quite OK except when a very slow block happened the tips average remain high for as much as 21 blocks and this is followed by long period of oscillation of difficulty because of the integral term.
+<img src="/img/9612tipsavg.png" alt="Img" /></p>
+
+<ul>
+  <li>Space</li>
+</ul>
+
+<p>Block spacing shows that there are no more very long blocks that anoncoin was plagued with for 2 years. This is thank to new PID parameters that makes it retarget slow enough for multipools to get out of the chain before the difficulty increase too much. Also most block are less than 30 minutes, this is thanks to our automatic difficulty reduction at 30 minutes without block found which makes the multipool jump back on anoncoin chain to mine the newly reduced difficulty block. For 5 hours there was no block at some point but this was compensated with quick blocks and then it went back to the normal pace thanks to the integral term oscillation.
+<img src="/img/9612space.png" alt="Img" /></p>
+
+<ul>
+  <li>
+    <p>Space zoom
+<img src="/img/9612space3600.png" alt="Img" /></p>
+  </li>
+  <li>
+    <p>Space more zoom</p>
+  </li>
+</ul>
+
+<p>A zoom around 180 sec show the block space trend to around 188 sec on average.
+<img src="/img/9612space360.png" alt="Img" /></p>
+
+<ul>
+  <li>
+    <p>Difficulty
+<img src="/img/9612diff.png" alt="Img" /></p>
+  </li>
+  <li>
+    <p>Log of difficulty</p>
+  </li>
+</ul>
+
+<p>A logarithm of difficulty shows the extent of variation of difficulty between the slow difficult block and the quick easy blocks. We can see than now there is less than one order of magnitude between the two extremes of difficulty vs two order spikes before with the old parameters. So the moderate retargetting of the difficulty with these particular proportional gain, maximum diff increase and decrease and the longer periods of 9 and 20 blocks for both moving averages are much better on mainet.
+<img src="/img/9612logofdiff.png" alt="Img" /></p>
+
+<ul>
+  <li>Difficulty chart</li>
+</ul>
+
+<p>Difficulty chart with the two moving average (blue and red) delimiting the range of oscillation of the PID (green). Sometimes the diff is allowed to go below the 20 blocks moving average of difficulty down, this is to reduce quickly the difficulty as long as no block below 180 sec is found. When a less than 180 sec block is found the reduced difficulty go back to the 20 block moving average. The moving average up is less aggressive than with the old parameters due to less gain for the PID, a lower allowed range and more blocks for the average. This avoid huge spike of difficulty that makes the miners afraid.
+<img src="/img/9612difficultychart.png" alt="Img" /></p>
+
+<p><strong>Conclusion</strong></p>
+
+<p>The GroundRod Retarget PID was tuned for slower retargetting on a mainnet populated by multipools of high fluctuation of difficulty. The new tuning of the parameters of the PID with less aggressive variation of difficulty reduced the ratio between easiest and hardest difficulty block to less than 10 times maximum (often the range is only about a doubling of difficulty). The target block spacing is much better with 180-188 sec average and we have no more long interval without block (1 of 5 hours after 11000 blocks).</p>
+
+    <p class="spacer"></p>
+    </div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="text-center">
+    <div class="footer-above">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col col-md-4">
+                    <h3>Contact</h3>
+                    <p>
+                         info@anoncoin.net
+                        <br> 
+                    </p>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h3>Around the Web</h3>
+                    <ul class="list-inline">
+                        
+                        <li>
+                            <a href="https://twitter.com/anoncoinproject" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-twitter"></i>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.facebook.com/Anoncoin/" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-facebook"></i>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.reddit.com/r/Anoncoin/" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-reddit"></i>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCwKSmUNcoRrBwm-kdsl1n2w" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-youtube"></i>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://github.com/Anoncoin/anoncoin" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-github"></i>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h3>Chat with us</h3>
+                    <p>
+                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU
+                            " class="btn btn-lg btn-outline">
+                                <i class="fa fa-slack"></i> Join our Slack
+                            </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-below">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    Copyright &copy; Anoncoin 2018
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-top page-scroll visible-xs visible-sm">
+    <a class="btn btn-primary" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+</div>
+
+    <!-- jQuery Version 1.11.0 -->
+<script src=" /js/jquery-1.11.0.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src=" /js/bootstrap.min.js "></script>
+
+<!-- Plugin JavaScript -->
+<script src=" /js/jquery.easing.min.js "></script>
+<script src=" /js/classie.js "></script>
+<script src=" /js/cbpAnimatedHeader.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src=" /js/freelancer.js "></script> 
+    </body>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>How to build Anoncoin develop</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Anoncoin(ANC) is a unique decentralized peer to peer internet cryptocurrency that provides for its users. I2P and Tor compatible, it is resistant to crackdowns from hostile authorities.  ">
+    <meta name="keywords" content="" /> 
+    <link rel="canonical" href="https://anoncoin.net/How_to_build_Anoncoin_develop/">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+
+    <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link rel="stylesheet" href=" /style.css ">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href=" /css/font-awesome/css/font-awesome.min.css ">
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+    <body id="page-top" class="index">
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-dropping">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Anoncoin</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <nav id="navbar-dropping" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                    
+                <li class="dropdown ">
+                    <a href="/About_Anoncoin/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">About
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                         
+                        <li>
+                            <a href="/About_Anoncoin/">About Anoncoin</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Anoncoin_in_the_news/">Anoncoin in the news</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Anoncoin_development_team/">Anoncoin development team</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://github.com/Anoncoin/project/tree/master/roadmap">Roadmap</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Donate/">Donate</a>
+                        </li>
+                         
+                    </ul>
+                </li>
+                    
+                <li class="dropdown ">
+                    <a href="/Download/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Downloads
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                         
+                        <li>
+                            <a href="/Download/#windowsdownload">Windows</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Download/#macdownload">Mac</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Download/#linuxdownload">Linux</a>
+                        </li>
+                         
+                    </ul>
+                </li>
+                    
+                <li class="dropdown ">
+                    <a href="/Blog/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Resources
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                         
+                        <li>
+                            <a href="/Blog/">Blog</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/FAQ/">FAQ</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Wiki/">Wiki</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/How_to_guides/">How to guides</a>
+                        </li>
+                         
+                    </ul>
+                </li>
+                    
+                <li class="dropdown ">
+                    <a href="/Exchanges/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Services
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                         
+                        <li>
+                            <a href="/Exchanges/">Exchanges</a>
+                        </li>
+                          
+                        <li>
+                            <a href="http://anoncash.net">Blockchain explorer</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Mining_pools/">Mining pools</a>
+                        </li>
+                          
+                        <li role="separator" class="divider"></li>
+                          
+                        <li>
+                            <a href="/Places_that_accept_Anoncoin/">Places that accept Anoncoin</a>
+                        </li>
+                         
+                    </ul>
+                </li>
+                    
+                <li class="dropdown ">
+                    <a href="/Community/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Community
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                         
+                        <li>
+                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU">Slack</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://bitcointalk.org/index.php?topic=227287.0">Bitcointalk</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://www.reddit.com/r/Anoncoin/">Reddit</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCwKSmUNcoRrBwm-kdsl1n2w">YouTube</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://twitter.com/anoncoinproject">Official Twitter</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://www.facebook.com/Anoncoin/">Facebook page</a>
+                        </li>
+                         
+                    </ul>
+                </li>
+                 
+            </ul>
+        </nav>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+    <!-- About Section -->
+<section class="article" id="about"></section>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1>How to build Anoncoin develop</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <p>
+
+    
+
+    <p>These guides are for installing the latest development builds (9.6.9) from <a href="https://github.com/Anoncoin/anoncoin">Github</a>. The new develop version is <em>0.9.6.9-6e80477</em>, branch gr_develop, commit 6e80477 (https://github.com/Anoncoin/anoncoin/commit/6e80477aee8843b8e32755d04416a1283596a76e). This version is based on Bitcoin 0.10.99 code. The old 9.4.4 develop version was <em>0.9.4.4-53469ee</em>, branch develop. To install Git through I2P please check <a href="http://git.repo.i2p/h/guide/setting_up_tunnels.html">the Git I2P guide</a>.</p>
+
+<h2 id="ubuntu-64-bit-or-debian-8">Ubuntu 64 bit or Debian 8</h2>
+
+<p>Open a terminal console and type:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install g++ git automake
+</code></pre></div></div>
+<p>If you are using Debian 8 add those:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install autoconf make libtool pkg-config libqt4-network libqtgui4
+</code></pre></div></div>
+<p>You may need to install these other packages as well: (Note, this will install ALL boost development packages)</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install libboost-all-dev libdb++-dev libssl-dev
+</code></pre></div></div>
+<p>Then continue with those commands:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd
+git clone https://github.com/Anoncoin/anoncoin.git
+cd anoncoin
+git checkout 6e80477
+./autogen.sh
+cd depends
+make
+</code></pre></div></div>
+<p>The toolchain build will take half an hour or more depending processor and bandwidth, when it is over without error, on the prompt line type:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dir
+</code></pre></div></div>
+<p>One of the newly created directories is named after the ‘triplet’, for instance x86_64-unknown-linux-gnu, x86_64-w64-mingw32, i686-w64-mingw32… : remember this as you will need to use it soon.</p>
+
+<p>Now to configure the build of the Anoncoin executables, type the following line with <your triplet="" name=""> being the name of the 'triplet' directory quoted above (without &lt;&gt;).</your></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ..
+./configure --prefix=`pwd`/depends/ &lt;your triplet name&gt;
+</code></pre></div></div>
+<p>Finally launch the build while still in the /anoncoin/ directory:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make
+</code></pre></div></div>
+<p>Now you can recover the compiled binaries (below).</p>
+
+<p><strong>In case of sse2 related errors after typing make</strong>, run this command:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export CFLAGS=“-msse2” ; export CPPFLAGS=“-msse2” ; export CXXFLAGS=“-msse2”
+</code></pre></div></div>
+<p>and then</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make clean
+</code></pre></div></div>
+<p>Now do again</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./configure --prefix=`pwd`/depends/ &lt;your triplet name&gt;
+make
+</code></pre></div></div>
+<p><strong>Recovering the compiled binaries:</strong></p>
+
+<p>Three programs were created:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anoncoin/src/anoncoind
+
+anoncoin/src/anoncoin-cli
+
+anoncoin/src/qt/anoncoin-qtc
+</code></pre></div></div>
+<p>If you would like to save the resulting executables, you can do the following:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make install
+</code></pre></div></div>
+<p>This will store your 3 binaries in your <prefix>/bin directory, for example: /home/cs8m/anoncoin/depends/x86_64-unknown-linux-gnu/bin</prefix></p>
+
+<p>To allow anoncoin-qt to be executable from any directory, you can copy it to usr/local/bin:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd src/qt
+sudo cp anoncoin-qtc /usr/local/bin
+</code></pre></div></div>
+<p>Now you can install the i2pd router in the same system as explained in <a href="/How_to_setup_Anoncoin_to_use_i2pd_in_a_VM_on_a_Windows_machine/">How to setup Anoncoin to use i2pd in a VM on a Windows machine</a></p>
+
+<p>Then you can continue by configuring the /home/username/.anoncoin/anoncoin.conf following the guide at <a href="/How_to_run_Anoncoin/">How to run Anoncoin</a></p>
+
+<p>On first execution, if the directory /home/username/.anoncoin/ contained a blockchain from a previously installed version, execute</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anoncoin-qtc -reindex
+</code></pre></div></div>
+<p>Ubuntu 32 bit
+————-</p>
+
+<p>Do the same as for 64 bit (see above). <strong>But In case of sse2 related errors after typing the second make command in anoncoin directory</strong>, run this command:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export CFLAGS=“-msse2” ; export CPPFLAGS=“-msse2” ; export CXXFLAGS=“-msse2”
+</code></pre></div></div>
+<p>and then</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make clean
+</code></pre></div></div>
+<p>Now do again</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./configure --prefix=`pwd`/depends/ &lt;your triplet name&gt;
+make
+</code></pre></div></div>
+<p>You get the three binaries needed to run the wallet. Follow the 64 bit guide for how to install them in more convenient folders.</p>
+
+<h2 id="windows-build-using-ubuntu-64-bit-in-a-vm-virtualbox">Windows build using Ubuntu 64 bit in a VM (VirtualBox)</h2>
+
+<p>(Additional material, on how to build Anoncoin for another HOST)</p>
+
+<p>After having saved the previously generated 3 binaries in your <prefix>/bin directory, the working directory tree can be cleaned of all your files used to create that configuration (see above)...</prefix></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/anoncoin
+make distclean
+</code></pre></div></div>
+<p>In the following example, we will be using Windows 64 bit as the target host.</p>
+
+<p>If you haven’t already done so, be sure now to have installed the g++ compiler for your target machine type, in this case we need the mingw-w64 tools for developers installed. Additionally, if you desire a Windows setup.exe to be built, you need to install the nsis developer tool. It works well with our Anoncoin setup.nsi script to build reliable Windows install/uninstall packages.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install mingw-w64 nsis
+</code></pre></div></div>
+<p>Then finally you can build the toolchain for that alternative:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./autogen.sh
+cd depends
+make HOST=x86_64-w64-mingw32
+</code></pre></div></div>
+<p>After the toolchain has been constructed, now build Anoncoin with your new prefix:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ..
+./configure --prefix=`pwd`/depends/x86_64-w64-mingw32 
+make
+make install
+</code></pre></div></div>
+<p>This will store your 3 binaries in your <prefix>/bin directory, in this case:</prefix></p>
+
+<p>/home/cs8m/anoncoin/depends/x86_64-w64-mingw32/bin</p>
+
+<p>Note: After that final install step, an anoncoin setup.exe can be built for windows too as follow. From the ~/anoncoin/ directory:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir release/ 
+cp depends/x86_64-w64-mingw32/bin/*.exe release/
+cd share/
+makensis setup.nsi
+</code></pre></div></div>
+<p>The anoncoin-0.9.6.9-win64-setup.exe and the executables will be found in anoncoin/release and can be copied to your windows 64 bit machine.</p>
+
+<p>To create a shared folder with the host computer on VirtualBox 4.3.20 (change number if another version is used), install the add-on:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget http://download.virtualbox.org/virtualbox/4.3.20/VBoxGuestAdditions_4.3.20.iso
+sudo mount -o loop VBoxGuestAdditions_4.3.20.iso /mnt
+cd /mnt
+sudo ./VBoxLinuxAdditions.run 
+</code></pre></div></div>
+<p>In VirtualBox, create a shared folder with automount activated</p>
+
+<p>You shall then add your own user name <username> to the vboxsf group to get access to the shared folder</username></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo adduser username vboxsf
+</code></pre></div></div>
+<p>Restart the VM and you shall see the shared folder in /media. Put the binaries inside to copy them to your host machine.</p>
+
+<p>So there you go, how to build Anoncoin for multiple targets on your linux machine.</p>
+
+<h2 id="os-x">OS X</h2>
+
+<p>Download the Anoncoin code and then change to the anoncoin directory using the commands</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/Anoncoin/anoncoin.git
+cd anoncoin
+git checkout develop
+</code></pre></div></div>
+<p>Next generate the make files using</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./autogen.sh
+</code></pre></div></div>
+<p>Now, change to the directory ‘depends’ to start building the required dependencies</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd depends
+./config.guess
+</code></pre></div></div>
+<p>This last command should output a triplet that looks something like this: x86_64-apple-darwin13.4.0. Enter (changing the triplet if necessary)</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make HOST=x86_64-apple-darwin14.3.0
+</code></pre></div></div>
+<p>The dependencies should download and build. If there are no errors, continue to building the anoncoin binaries:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ..
+./configure --prefix=pwd/depends/x86_64-apple-darwin14.3.0 
+make HOST=x86_64-apple-darwin14.3.0
+make check
+make install
+</code></pre></div></div>
+<p>The binaries anoncoind, anoncoin-cli, and anoncoin-qt should be located in the directories src and src/qt. To make an OSX application file, use</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make deploy
+</code></pre></div></div>
+<p>This will create Anoncoin.app and Anoncoin.dmg in the the root anoncoin directory.</p>
+
+<p>On first execution, if the directory ~Library/Application\ Support/Anoncoin contained a blockchain from a previously installed version, execute</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anoncoin-qt -reindex
+</code></pre></div></div>
+<p>See also
+——–</p>
+
+<ul>
+  <li>Alternatively, to build without the toolchain:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./autogen.sh
+./configure --with-incompatible-bdb
+make
+</code></pre></div>    </div>
+  </li>
+  <li><a href="http://anoncoin.github.io/anoncoin/">Anoncoin Doxygen project</a></li>
+</ul>
+
+<h2 id="what-to-do-next">What to do next?</h2>
+
+<p>Place the bootstrap.dat file in the appropriate Anoncoin data directory: <a href="/How_to_use_a_bootstrap_file_to_speed_up_initial_synchronization/">How_to_use_a_bootstrap_file_to_speed_up_initial_synchronization</a></p>
+
+<p>Create the anoncoin.conf file in the appropriate Anoncoin data directory.</p>
+
+    <p class="spacer"></p>
+    </div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="text-center">
+    <div class="footer-above">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col col-md-4">
+                    <h3>Contact</h3>
+                    <p>
+                         info@anoncoin.net
+                        <br> 
+                    </p>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h3>Around the Web</h3>
+                    <ul class="list-inline">
+                        
+                        <li>
+                            <a href="https://twitter.com/anoncoinproject" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-twitter"></i>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.facebook.com/Anoncoin/" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-facebook"></i>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.reddit.com/r/Anoncoin/" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-reddit"></i>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCwKSmUNcoRrBwm-kdsl1n2w" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-youtube"></i>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://github.com/Anoncoin/anoncoin" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-github"></i>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h3>Chat with us</h3>
+                    <p>
+                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU
+                            " class="btn btn-lg btn-outline">
+                                <i class="fa fa-slack"></i> Join our Slack
+                            </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-below">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    Copyright &copy; Anoncoin 2018
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-top page-scroll visible-xs visible-sm">
+    <a class="btn btn-primary" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+</div>
+
+    <!-- jQuery Version 1.11.0 -->
+<script src=" /js/jquery-1.11.0.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src=" /js/bootstrap.min.js "></script>
+
+<!-- Plugin JavaScript -->
+<script src=" /js/jquery.easing.min.js "></script>
+<script src=" /js/classie.js "></script>
+<script src=" /js/cbpAnimatedHeader.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src=" /js/freelancer.js "></script> 
+    </body>
+</html>

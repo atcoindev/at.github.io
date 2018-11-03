@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>How to setup Anoncoin to use i2pd in a VM on a Windows machine</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Anoncoin(ANC) is a unique decentralized peer to peer internet cryptocurrency that provides for its users. I2P and Tor compatible, it is resistant to crackdowns from hostile authorities.  ">
+    <meta name="keywords" content="" /> 
+    <link rel="canonical" href="https://anoncoin.net/How_to_setup_Anoncoin_to_use_i2pd_in_a_VM_on_a_Windows_machine/">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
+
+    <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link rel="stylesheet" href=" /style.css ">
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href=" /css/font-awesome/css/font-awesome.min.css ">
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+    <body id="page-top" class="index">
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-dropping">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Anoncoin</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <nav id="navbar-dropping" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                    
+                <li class="dropdown ">
+                    <a href="/About_Anoncoin/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">About
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                         
+                        <li>
+                            <a href="/About_Anoncoin/">About Anoncoin</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Anoncoin_in_the_news/">Anoncoin in the news</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Anoncoin_development_team/">Anoncoin development team</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://github.com/Anoncoin/project/tree/master/roadmap">Roadmap</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Donate/">Donate</a>
+                        </li>
+                         
+                    </ul>
+                </li>
+                    
+                <li class="dropdown ">
+                    <a href="/Download/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Downloads
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                         
+                        <li>
+                            <a href="/Download/#windowsdownload">Windows</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Download/#macdownload">Mac</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Download/#linuxdownload">Linux</a>
+                        </li>
+                         
+                    </ul>
+                </li>
+                    
+                <li class="dropdown ">
+                    <a href="/Blog/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Resources
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                         
+                        <li>
+                            <a href="/Blog/">Blog</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/FAQ/">FAQ</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Wiki/">Wiki</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/How_to_guides/">How to guides</a>
+                        </li>
+                         
+                    </ul>
+                </li>
+                    
+                <li class="dropdown ">
+                    <a href="/Exchanges/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Services
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                         
+                        <li>
+                            <a href="/Exchanges/">Exchanges</a>
+                        </li>
+                          
+                        <li>
+                            <a href="http://anoncash.net">Blockchain explorer</a>
+                        </li>
+                          
+                        <li>
+                            <a href="/Mining_pools/">Mining pools</a>
+                        </li>
+                          
+                        <li role="separator" class="divider"></li>
+                          
+                        <li>
+                            <a href="/Places_that_accept_Anoncoin/">Places that accept Anoncoin</a>
+                        </li>
+                         
+                    </ul>
+                </li>
+                    
+                <li class="dropdown ">
+                    <a href="/Community/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                        aria-expanded="false">Community
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                         
+                        <li>
+                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU">Slack</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://bitcointalk.org/index.php?topic=227287.0">Bitcointalk</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://www.reddit.com/r/Anoncoin/">Reddit</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCwKSmUNcoRrBwm-kdsl1n2w">YouTube</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://twitter.com/anoncoinproject">Official Twitter</a>
+                        </li>
+                          
+                        <li>
+                            <a href="https://www.facebook.com/Anoncoin/">Facebook page</a>
+                        </li>
+                         
+                    </ul>
+                </li>
+                 
+            </ul>
+        </nav>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+    <!-- About Section -->
+<section class="article" id="about"></section>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h1>How to setup Anoncoin to use i2pd in a VM on a Windows machine</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <p>
+
+    
+
+    <p>Download Oracle VirtualBox <a href="https://www.virtualbox.org/wiki/Downloads">https://www.virtualbox.org/wiki/Downloads</a></p>
+
+<p>Download Mint 17.1 MATE, <a href="http://www.linuxmint.com/download.php">http://www.linuxmint.com/download.php</a>, choose the version that is compatible with your system (32/64 bits)</p>
+
+<p>Install VirtualBox, create a new Virtual Machine (VM) based on Linux Ubuntu, allocate 2048 MB memory, VDI dynamic, all default options</p>
+
+<p>Run it, select your Mint iso file, install Mint</p>
+
+<p>Restart VM, log in and open terminal (right click on desktop) type:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install g++
+</code></pre></div></div>
+
+<p>Run web browser and go to <a href="https://github.com/PurpleI2P/i2pd">https://github.com/PurpleI2P/i2pd</a></p>
+
+<p>Download the ZIP file <a href="https://github.com/PurpleI2P/i2pd/archive/master.zip">https://github.com/PurpleI2P/i2pd/archive/master.zip</a> (alternatively execute from home</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/PurpleI2P/i2pd.git
+</code></pre></div></div>
+
+<p>In this case it will install in /home/i2pd directory</p>
+
+<p>Open the download directory, right click and extract to home directory</p>
+
+<p>In the terminal type:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install libboost-dev libboost-filesystem-dev libboost-program-options-dev libboost-regex-dev libcrypto++-dev libboost-date-time-dev
+cd
+cd i2pd-master
+make
+</code></pre></div></div>
+
+<p>Shutdown the VM</p>
+
+<p>In VirtualBox, select the VM and click on network</p>
+
+<p>Select bridge network and choose your network adapter</p>
+
+<p>Allow promiscuity mode All and write your MAC ID</p>
+
+<p>Restart the VM, log in and in terminal type:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ping 192.168.1.55
+</code></pre></div></div>
+
+<p>It shall reply ‘From 192.168.1.xx Destination Host Unreachable’ : 192.168.1.xx is your IP address on the local network</p>
+
+<p>Now open your router configuration in your normal browser (address is often 192.168.1.1 or type <code class="highlighter-rouge">ipconfig</code> in windows console and look for “standard gateway”)</p>
+
+<p>You have to find your DHCP setting and bind address 192.168.1.xx to a static address with MAC ID = the one you wrote from VirtualBox network option</p>
+
+<p>When this is done, go in the VM and type in terminal:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd i2pd-master
+./i2p -daemon=1
+</code></pre></div></div>
+
+<p>It will display the version of i2pd, the data directory and the CMD parameters. Now type:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ../.i2pd 
+</code></pre></div></div>
+
+<p>In this directory, from terminal type:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>nano i2pd.log
+</code></pre></div></div>
+
+<p>Search in the file: Start listening TCP port zzzzz and Start listening UDP zzzzz</p>
+
+<p>zzzzz is the port number which i2pd is listening to</p>
+
+<p>Now go back in your router configuration page in your normal web browser</p>
+
+<p>Forward the ports TCP and UDP zzzzz to 192.168.1.xx</p>
+
+<p>Go in the VM, close nano (ctrl+X) and type</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pkill i2p
+</code></pre></div></div>
+
+<p>Restart the VM, log in and in terminal type:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd i2pd-master
+./i2p -daemon=1 -port=zzzzz -samport=7656
+</code></pre></div></div>
+
+<p>Now i2pd is running in the background</p>
+
+<p>To access the webconsole, go in your favorite browser and connect to 192.168.1.xx:7070</p>
+
+<p>In Windows, open directory %appdata%/anoncoin/ (Win+R then type in the box %appdata%/anoncoin/)</p>
+
+<p>In that directory, edit anoncoin.conf (for version 0.9.4) and change those lines:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>onlynet=i2p #(if only i2p is wanted and not ipv4, be sure to not have any addnode=ipv4 address remaining)
+[i2p.options]
+enabled=1
+static=1 #(be sure to have defined the three keys of a static I2P address in [i2p.mydestination])
+samhost=192.168.1.xx #(the static local IP address allocated to the VM in DHCP)
+samport=7656
+</code></pre></div></div>
+
+<p>Run anoncoin-qt</p>
+
+<p>Wait until it open and then get connected (check the peers in debug windows, it can take from 5 min to 20 min)</p>
+
+    <p class="spacer"></p>
+    </div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="text-center">
+    <div class="footer-above">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col col-md-4">
+                    <h3>Contact</h3>
+                    <p>
+                         info@anoncoin.net
+                        <br> 
+                    </p>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h3>Around the Web</h3>
+                    <ul class="list-inline">
+                        
+                        <li>
+                            <a href="https://twitter.com/anoncoinproject" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-twitter"></i>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.facebook.com/Anoncoin/" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-facebook"></i>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.reddit.com/r/Anoncoin/" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-reddit"></i>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCwKSmUNcoRrBwm-kdsl1n2w" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-youtube"></i>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://github.com/Anoncoin/anoncoin" class="btn-social btn-outline">
+                                <i class="fa fa-fw fa-github"></i>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h3>Chat with us</h3>
+                    <p>
+                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU
+                            " class="btn btn-lg btn-outline">
+                                <i class="fa fa-slack"></i> Join our Slack
+                            </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-below">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    Copyright &copy; Anoncoin 2018
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+<div class="scroll-top page-scroll visible-xs visible-sm">
+    <a class="btn btn-primary" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+    </a>
+</div>
+
+    <!-- jQuery Version 1.11.0 -->
+<script src=" /js/jquery-1.11.0.js "></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src=" /js/bootstrap.min.js "></script>
+
+<!-- Plugin JavaScript -->
+<script src=" /js/jquery.easing.min.js "></script>
+<script src=" /js/classie.js "></script>
+<script src=" /js/cbpAnimatedHeader.js "></script>
+
+<!-- Custom Theme JavaScript -->
+<script src=" /js/freelancer.js "></script> 
+    </body>
+</html>
