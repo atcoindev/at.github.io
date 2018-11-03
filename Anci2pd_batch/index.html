@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Anci2pd batch</title>
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="Atcoin(ANC) is a unique decentralized peer to peer internet cryptocurrency that provides for its users. I2P and Tor compatible, it is resistant to crackdowns from hostile authorities.  ">
+    <meta name="description" content="Anoncoin(ANC) is a unique decentralized peer to peer internet cryptocurrency that provides for its users. I2P and Tor compatible, it is resistant to crackdowns from hostile authorities.  ">
     <meta name="keywords" content="" /> 
     <link rel="canonical" href="https://anoncoin.net/Anci2pd_batch/">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
@@ -37,7 +37,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">Atcoin</a>
+            <a class="navbar-brand" href="/">Anoncoin</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -45,26 +45,26 @@
             <ul class="nav navbar-nav">
                     
                 <li class="dropdown ">
-                    <a href="/About_Atcoin/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    <a href="/About_Anoncoin/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                         aria-expanded="false">About
                         <span class="caret"></span>
                     </a>
                     <ul class="dropdown-menu">
                          
                         <li>
-                            <a href="/About_Atcoin/">About Atcoin</a>
+                            <a href="/About_Anoncoin/">About Anoncoin</a>
                         </li>
                           
                         <li>
-                            <a href="/Atcoin_in_the_news/">Atcoinin the news</a>
+                            <a href="/Anoncoin_in_the_news/">Anoncoin in the news</a>
                         </li>
                           
                         <li>
-                            <a href="/Atcoin_development_team/">Atcoindevelopment team</a>
+                            <a href="/Anoncoin_development_team/">Anoncoin development team</a>
                         </li>
                           
                         <li>
-                            <a href="https://github.com/Atcoin/project/tree/master/roadmap">Roadmap</a>
+                            <a href="https://github.com/Anoncoin/project/tree/master/roadmap">Roadmap</a>
                         </li>
                           
                         <li>
@@ -144,7 +144,7 @@
                         <li role="separator" class="divider"></li>
                           
                         <li>
-                            <a href="/Places_that_accept_Atcoin/">Places that accept Atcoin</a>
+                            <a href="/Places_that_accept_Anoncoin/">Places that accept Anoncoin</a>
                         </li>
                          
                     </ul>
@@ -166,7 +166,7 @@
                         </li>
                           
                         <li>
-                            <a href="https://www.reddit.com/r/Atcoin/">Reddit</a>
+                            <a href="https://www.reddit.com/r/Anoncoin/">Reddit</a>
                         </li>
                           
                         <li>
@@ -178,7 +178,7 @@
                         </li>
                           
                         <li>
-                            <a href="https://www.facebook.com/Atcoin/">Facebook page</a>
+                            <a href="https://www.facebook.com/Anoncoin/">Facebook page</a>
                         </li>
                          
                     </ul>
@@ -218,18 +218,18 @@ REM BFCPEINVISEXE<span class="o">=</span>0
 REM BFCPEVERINCLUDE<span class="o">=</span>1
 REM BFCPEVERVERSION<span class="o">=</span>1.0.12.0
 REM BFCPEVERPRODUCT<span class="o">=</span>ANCI2Pd Portable
-REM BFCPEVERDESC<span class="o">=</span>ANCI2Pd Atcoin &amp; I2Pd bundle
-REM BFCPEVERCOMPANY<span class="o">=</span>Atcoin Core &amp; PurpleI2P
-REM BFCPEVERCOPYRIGHT<span class="o">=</span>© 2013-2016 Atcoin Core &amp; PurpleI2P
+REM BFCPEVERDESC<span class="o">=</span>ANCI2Pd Anoncoin &amp; I2Pd bundle
+REM BFCPEVERCOMPANY<span class="o">=</span>Anoncoin Core &amp; PurpleI2P
+REM BFCPEVERCOPYRIGHT<span class="o">=</span>© 2013-2016 Anoncoin Core &amp; PurpleI2P
 REM BFCPEOPTIONEND
 @ECHO ON
 @echo off
-title ANCI2Pd - Atcoin preconfigured for I2Pd - launcher
+title ANCI2Pd - Anoncoin preconfigured for I2Pd - launcher
 <span class="nb">set</span> <span class="nv">$pause</span><span class="o">=</span>ping.exe 0.0.0.0 -n
 ver| find “6.” &gt;nul &amp;&amp; set <span class="nv">$pause</span><span class="o">=</span>timeout.exe /t
 <span class="nb">set</span> ANCqtc<span class="o">=</span>anoncoin-qtc.exe
 <span class="nb">set</span> ANCopt<span class="o">=</span>-i2p.options.enabled<span class="o">=</span>1 -onlynet<span class="o">=</span>i2p
-<span class="nb">set</span> ANCdir<span class="o">=</span>Atcoin\data
+<span class="nb">set</span> ANCdir<span class="o">=</span>Anoncoin\data
 <span class="nb">set</span> i2pd<span class="o">=</span>i2pd.exe 
 taskList|find /i “%i2pd%”&gt;nul&amp;&amp;<span class="o">(</span>goto runANC<span class="o">)||(</span>goto starti2p<span class="o">)</span>
 :starti2p
@@ -245,7 +245,7 @@ taskList|find /i “%i2pd%”&gt;nul&amp;&amp;<span class="o">(</span>goto ru
 <span class="k">IF</span> NOT EXIST %ANCdir% mkdir %ANCdir%
 <span class="nb">cls
 </span>echo.
-<span class="nb">echo</span> Press g for Atcoin to generate a new static destination...
+<span class="nb">echo</span> Press g for Anoncoin to generate a new static destination...
 <span class="nb">echo</span> ------------------------------------------------------------
 choice /c gn /T 2 /D n
 <span class="k">if</span> errorlevel 2 goto runANCnow
@@ -257,17 +257,17 @@ choice /c gn /T 2 /D n
 <span class="nb">echo</span> ... Generating a new static destination now
 <span class="nb">echo</span> <span class="o">============================================================</span>
 <span class="k">IF</span> EXIST %ANCdir%\i2pkey.dat del %ANCdir%\i2pkey.dat
-<span class="nb">start</span> <span class="s2">""</span> “Atcoin/%ANCqtc%” %ANCopt% -datadir<span class="o">=</span>%ANCdir% -generatei2pdestination
+<span class="nb">start</span> <span class="s2">""</span> “Anoncoin/%ANCqtc%” %ANCopt% -datadir<span class="o">=</span>%ANCdir% -generatei2pdestination
 %<span class="nv">$pause</span>% 5 &gt;nul
 <span class="k">exit</span> /b 0
 :runANCnow 
 <span class="nb">cls
 </span>echo.
 <span class="nb">echo</span> <span class="o">============================================================</span>
-<span class="k">IF</span> NOT EXIST %ANCdir%\i2pkey.dat echo ... Atcoin running with a dynamic destination
-<span class="k">IF</span> EXIST %ANCdir%\i2pkey.dat echo ... Atcoin running with a static destination
+<span class="k">IF</span> NOT EXIST %ANCdir%\i2pkey.dat echo ... Anoncoin running with a dynamic destination
+<span class="k">IF</span> EXIST %ANCdir%\i2pkey.dat echo ... Anoncoin running with a static destination
 <span class="nb">echo</span> <span class="o">============================================================</span>
-<span class="nb">start</span> <span class="s2">""</span> “Atcoin/%ANCqtc%” %ANCopt% -datadir<span class="o">=</span>%ANCdir%
+<span class="nb">start</span> <span class="s2">""</span> “Anoncoin/%ANCqtc%” %ANCopt% -datadir<span class="o">=</span>%ANCdir%
 %<span class="nv">$pause</span>% 5 &gt;nul
 <span class="k">exit</span> /b 0 
 rem <span class="o">==========================================================================</span>
@@ -311,13 +311,13 @@ rem <span class="o">===========================================================
                         </li>
                         
                         <li>
-                            <a href="https://www.facebook.com/Atcoin/" class="btn-social btn-outline">
+                            <a href="https://www.facebook.com/Anoncoin/" class="btn-social btn-outline">
                                 <i class="fa fa-fw fa-facebook"></i>
                             </a>
                         </li>
                         
                         <li>
-                            <a href="https://www.reddit.com/r/Atcoin/" class="btn-social btn-outline">
+                            <a href="https://www.reddit.com/r/Anoncoin/" class="btn-social btn-outline">
                                 <i class="fa fa-fw fa-reddit"></i>
                             </a>
                         </li>
@@ -329,7 +329,7 @@ rem <span class="o">===========================================================
                         </li>
                         
                         <li>
-                            <a href="https://github.com/Atcoin/anoncoin" class="btn-social btn-outline">
+                            <a href="https://github.com/Anoncoin/anoncoin" class="btn-social btn-outline">
                                 <i class="fa fa-fw fa-github"></i>
                             </a>
                         </li>
@@ -352,7 +352,7 @@ rem <span class="o">===========================================================
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    Copyright &copy; Atcoin2018
+                    Copyright &copy; Anoncoin 2018
                 </div>
             </div>
         </div>

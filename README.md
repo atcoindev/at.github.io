@@ -1,4 +1,4 @@
-# Atcoinwebsite
+# Anoncoin website
 
 This is a work in progress. Website content is markdown served with Jekyll. Jekyll is a blog-aware, static site generator in Ruby.
 
@@ -15,7 +15,7 @@ This is a work in progress. Website content is markdown served with Jekyll. Jeky
 
 We are looking for help with articles, design, transation, etc. Join us in #design [on Slack.](https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU)
 
-This is the basic process on how to contribute to the Atcoinwebsite.
+This is the basic process on how to contribute to the Anoncoin website.
 
 ## Creating a Fork
 
