@@ -3,7 +3,7 @@
     <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>How to setup Anoncoin to use Tor</title>
+    <title>How to setup Atcointo use Tor</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Anoncoin(ANC) is a unique decentralized peer to peer internet cryptocurrency that provides for its users. I2P and Tor compatible, it is resistant to crackdowns from hostile authorities.  ">
     <meta name="keywords" content="" /> 
@@ -56,11 +56,11 @@
                         </li>
                           
                         <li>
-                            <a href="/Anoncoin_in_the_news/">Anoncoin in the news</a>
+                            <a href="/Anoncoin_in_the_news/">Atcoinin the news</a>
                         </li>
                           
                         <li>
-                            <a href="/Anoncoin_development_team/">Anoncoin development team</a>
+                            <a href="/Anoncoin_development_team/">Atcoindevelopment team</a>
                         </li>
                           
                         <li>
@@ -195,7 +195,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12 text-center">
-            <h1>How to setup Anoncoin to use Tor</h1>
+            <h1>How to setup Atcointo use Tor</h1>
         </div>
     </div>
     <div class="row">
@@ -204,11 +204,11 @@
 
     
 
-    <p>Running Anoncoin behind a Tor proxy will attempt to anonymize all incoming and outgoing traffic, and also allow you to connect to Tor hidden services. The following directions assume you have a Tor proxy running on port 9050. Many distributions default to having a SOCKS proxy listening on port 9050, but others may not. In particular, the <a href="https://www.torproject.org/projects/torbrowser.html.en">Tor Browser</a> defaults to listening on port 9150. See <a href="https://www.torproject.org/docs/faq.html.en#TBBSocksPort">this link</a> for how to properly configure Tor.</p>
+    <p>Running Atcoinbehind a Tor proxy will attempt to anonymize all incoming and outgoing traffic, and also allow you to connect to Tor hidden services. The following directions assume you have a Tor proxy running on port 9050. Many distributions default to having a SOCKS proxy listening on port 9050, but others may not. In particular, the <a href="https://www.torproject.org/projects/torbrowser.html.en">Tor Browser</a> defaults to listening on port 9150. See <a href="https://www.torproject.org/docs/faq.html.en#TBBSocksPort">this link</a> for how to properly configure Tor.</p>
 
 <h2 id="first-a-warning">First, a warning</h2>
 
-<p>Although Tor can help conceal your location and keep your internet traffic private, you can be deanonymized if an attacker controls both your entry and exit points to and from the Tor network. Hidden services <a href="https://blog.torproject.org/blog/thoughts-and-concerns-about-operation-onymous">have</a> been deanonymized by national security agencies, and these attacks will become more sophisticated as Tor research continues. Anoncoin was built to take advantage of the superior I2P anonymizing network. We can only advocate using Tor with Anoncoin if privacy is absolutely required, and if it is not possible to access the I2P network.</p>
+<p>Although Tor can help conceal your location and keep your internet traffic private, you can be deanonymized if an attacker controls both your entry and exit points to and from the Tor network. Hidden services <a href="https://blog.torproject.org/blog/thoughts-and-concerns-about-operation-onymous">have</a> been deanonymized by national security agencies, and these attacks will become more sophisticated as Tor research continues. Atcoinwas built to take advantage of the superior I2P anonymizing network. We can only advocate using Tor with Atcoinif privacy is absolutely required, and if it is not possible to access the I2P network.</p>
 
 <h2 id="running-the-anoncoin-qt-client-behind-a-tor-proxy">Running the Anoncoin-Qt client behind a Tor proxy</h2>
 
@@ -217,17 +217,17 @@
 <ol>
   <li>Setup and run Tor on your computer.</li>
   <li>Open the Anoncoin=Qt client.</li>
-  <li>In the Anoncoin client preferences, go to “Network.”</li>
+  <li>In the Atcoinclient preferences, go to “Network.”</li>
   <li>Click on “Connect through SOCKS proxy.”</li>
   <li>Set the proxy IP to “127.0.0.1”, the port to “9050”, and the SOCKS version to “5.”</li>
-  <li>Click “ok”, and restart the Anoncoin client.</li>
+  <li>Click “ok”, and restart the Atcoinclient.</li>
 </ol>
 
 <p>That’s it!</p>
 
-<h2 id="running-the-anoncoin-daemon-anoncoind-behind-a-tor-proxy">Running the Anoncoin daemon (anoncoind) behind a Tor proxy</h2>
+<h2 id="running-the-anoncoin-daemon-anoncoind-behind-a-tor-proxy">Running the Atcoindaemon (anoncoind) behind a Tor proxy</h2>
 
-<p>The Anoncoin daemon (run at the command line) accepts the following Tor-related options:</p>
+<p>The Atcoindaemon (run at the command line) accepts the following Tor-related options:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-proxy=ip:port
 </code></pre></div></div>
@@ -266,9 +266,9 @@ seednode=xxxx.onion
 
 <p>Note that it is possible to set both <code class="highlighter-rouge">onlynet=tor</code> and <code class="highlighter-rouge">onlynet=i2p</code>, so that all traffic is sent through either I2P or Tor hidden servers.</p>
 
-<h2 id="how-to-run-an-anoncoin-tor-hidden-service">How to run an Anoncoin Tor hidden service</h2>
+<h2 id="how-to-run-an-anoncoin-tor-hidden-service">How to run an AtcoinTor hidden service</h2>
 
-<p>If you have set up Anoncoin to run behind a Tor proxy, it is simple to make your node reachable from the Tor network by creating a hidden service. First, add these lines to your <code class="highlighter-rouge">torrc</code> configuration file (found in /etc/tor/, or /usr/local/etc/tor/)</p>
+<p>If you have set up Atcointo run behind a Tor proxy, it is simple to make your node reachable from the Tor network by creating a hidden service. First, add these lines to your <code class="highlighter-rouge">torrc</code> configuration file (found in /etc/tor/, or /usr/local/etc/tor/)</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HiddenServiceDir /var/lib/tor/anoncoin-service/
 HiddenServicePort 9377 127.0.0.1:9377
@@ -308,7 +308,7 @@ onlynet=tor
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anoncoind -onion=127.0.0.1:9050 -externalip=xxxx.onion -listen -discover
 </code></pre></div></div>
 
-<p>This last option is the best for supporting the Anoncoin network.</p>
+<p>This last option is the best for supporting the Atcoinnetwork.</p>
 
 <h2 id="connecting-to-a-tor-hidden-server">Connecting to a Tor hidden server</h2>
 
@@ -338,7 +338,7 @@ onlynet=tor
 <h2 id="see-also">See also</h2>
 
 <ul>
-  <li><a href="/How_to_setup_your_Anoncoin_wallet/">How to setup your Anoncoin wallet</a></li>
+  <li><a href="/How_to_setup_your_Anoncoin_wallet/">How to setup your Atcoinwallet</a></li>
   <li><a href="/I2P/">I2P</a></li>
 </ul>
 
@@ -411,7 +411,7 @@ onlynet=tor
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    Copyright &copy; Anoncoin 2018
+                    Copyright &copy; Atcoin2018
                 </div>
             </div>
         </div>

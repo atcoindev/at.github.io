@@ -3,7 +3,7 @@
     <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>How to build Anoncoin develop</title>
+    <title>How to build Atcoindevelop</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Anoncoin(ANC) is a unique decentralized peer to peer internet cryptocurrency that provides for its users. I2P and Tor compatible, it is resistant to crackdowns from hostile authorities.  ">
     <meta name="keywords" content="" /> 
@@ -56,11 +56,11 @@
                         </li>
                           
                         <li>
-                            <a href="/Anoncoin_in_the_news/">Anoncoin in the news</a>
+                            <a href="/Anoncoin_in_the_news/">Atcoinin the news</a>
                         </li>
                           
                         <li>
-                            <a href="/Anoncoin_development_team/">Anoncoin development team</a>
+                            <a href="/Anoncoin_development_team/">Atcoindevelopment team</a>
                         </li>
                           
                         <li>
@@ -195,7 +195,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12 text-center">
-            <h1>How to build Anoncoin develop</h1>
+            <h1>How to build Atcoindevelop</h1>
         </div>
     </div>
     <div class="row">
@@ -233,7 +233,7 @@ make
 </code></pre></div></div>
 <p>One of the newly created directories is named after the ‘triplet’, for instance x86_64-unknown-linux-gnu, x86_64-w64-mingw32, i686-w64-mingw32… : remember this as you will need to use it soon.</p>
 
-<p>Now to configure the build of the Anoncoin executables, type the following line with <your triplet="" name=""> being the name of the 'triplet' directory quoted above (without &lt;&gt;).</your></p>
+<p>Now to configure the build of the Atcoinexecutables, type the following line with <your triplet="" name=""> being the name of the 'triplet' directory quoted above (without &lt;&gt;).</your></p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ..
 ./configure --prefix=`pwd`/depends/ &lt;your triplet name&gt;
 </code></pre></div></div>
@@ -270,7 +270,7 @@ anoncoin/src/qt/anoncoin-qtc
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd src/qt
 sudo cp anoncoin-qtc /usr/local/bin
 </code></pre></div></div>
-<p>Now you can install the i2pd router in the same system as explained in <a href="/How_to_setup_Anoncoin_to_use_i2pd_in_a_VM_on_a_Windows_machine/">How to setup Anoncoin to use i2pd in a VM on a Windows machine</a></p>
+<p>Now you can install the i2pd router in the same system as explained in <a href="/How_to_setup_Anoncoin_to_use_i2pd_in_a_VM_on_a_Windows_machine/">How to setup Atcointo use i2pd in a VM on a Windows machine</a></p>
 
 <p>Then you can continue by configuring the /home/username/.anoncoin/anoncoin.conf following the guide at <a href="/How_to_run_Anoncoin/">How to run Anoncoin</a></p>
 
@@ -294,7 +294,7 @@ make
 
 <h2 id="windows-build-using-ubuntu-64-bit-in-a-vm-virtualbox">Windows build using Ubuntu 64 bit in a VM (VirtualBox)</h2>
 
-<p>(Additional material, on how to build Anoncoin for another HOST)</p>
+<p>(Additional material, on how to build Atcoinfor another HOST)</p>
 
 <p>After having saved the previously generated 3 binaries in your <prefix>/bin directory, the working directory tree can be cleaned of all your files used to create that configuration (see above)...</prefix></p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/anoncoin
@@ -302,7 +302,7 @@ make distclean
 </code></pre></div></div>
 <p>In the following example, we will be using Windows 64 bit as the target host.</p>
 
-<p>If you haven’t already done so, be sure now to have installed the g++ compiler for your target machine type, in this case we need the mingw-w64 tools for developers installed. Additionally, if you desire a Windows setup.exe to be built, you need to install the nsis developer tool. It works well with our Anoncoin setup.nsi script to build reliable Windows install/uninstall packages.</p>
+<p>If you haven’t already done so, be sure now to have installed the g++ compiler for your target machine type, in this case we need the mingw-w64 tools for developers installed. Additionally, if you desire a Windows setup.exe to be built, you need to install the nsis developer tool. It works well with our Atcoinsetup.nsi script to build reliable Windows install/uninstall packages.</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install mingw-w64 nsis
 </code></pre></div></div>
 <p>Then finally you can build the toolchain for that alternative:</p>
@@ -310,7 +310,7 @@ make distclean
 cd depends
 make HOST=x86_64-w64-mingw32
 </code></pre></div></div>
-<p>After the toolchain has been constructed, now build Anoncoin with your new prefix:</p>
+<p>After the toolchain has been constructed, now build Atcoinwith your new prefix:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ..
 ./configure --prefix=`pwd`/depends/x86_64-w64-mingw32 
 make
@@ -341,11 +341,11 @@ sudo ./VBoxLinuxAdditions.run 
 </code></pre></div></div>
 <p>Restart the VM and you shall see the shared folder in /media. Put the binaries inside to copy them to your host machine.</p>
 
-<p>So there you go, how to build Anoncoin for multiple targets on your linux machine.</p>
+<p>So there you go, how to build Atcoinfor multiple targets on your linux machine.</p>
 
 <h2 id="os-x">OS X</h2>
 
-<p>Download the Anoncoin code and then change to the anoncoin directory using the commands</p>
+<p>Download the Atcoincode and then change to the anoncoin directory using the commands</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/Anoncoin/anoncoin.git
 cd anoncoin
 git checkout develop
@@ -372,7 +372,7 @@ make install
 </code></pre></div></div>
 <p>This will create Anoncoin.app and Anoncoin.dmg in the the root anoncoin directory.</p>
 
-<p>On first execution, if the directory ~Library/Application\ Support/Anoncoin contained a blockchain from a previously installed version, execute</p>
+<p>On first execution, if the directory ~Library/Application\ Support/Atcoincontained a blockchain from a previously installed version, execute</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anoncoin-qt -reindex
 </code></pre></div></div>
 <p>See also
@@ -385,14 +385,14 @@ make install
 make
 </code></pre></div>    </div>
   </li>
-  <li><a href="http://anoncoin.github.io/anoncoin/">Anoncoin Doxygen project</a></li>
+  <li><a href="http://anoncoin.github.io/anoncoin/">AtcoinDoxygen project</a></li>
 </ul>
 
 <h2 id="what-to-do-next">What to do next?</h2>
 
-<p>Place the bootstrap.dat file in the appropriate Anoncoin data directory: <a href="/How_to_use_a_bootstrap_file_to_speed_up_initial_synchronization/">How_to_use_a_bootstrap_file_to_speed_up_initial_synchronization</a></p>
+<p>Place the bootstrap.dat file in the appropriate Atcoindata directory: <a href="/How_to_use_a_bootstrap_file_to_speed_up_initial_synchronization/">How_to_use_a_bootstrap_file_to_speed_up_initial_synchronization</a></p>
 
-<p>Create the anoncoin.conf file in the appropriate Anoncoin data directory.</p>
+<p>Create the anoncoin.conf file in the appropriate Atcoindata directory.</p>
 
     <p class="spacer"></p>
     </div>
@@ -463,7 +463,7 @@ make
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    Copyright &copy; Anoncoin 2018
+                    Copyright &copy; Atcoin2018
                 </div>
             </div>
         </div>
