@@ -3,11 +3,11 @@
     <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Atcoin clearnet configuration.</title>
+    <title>Atcoin address</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Atcoin(ANC) is a unique decentralized peer to peer internet cryptocurrency that provides for its users. I2P and Tor compatible, it is resistant to crackdowns from hostile authorities.  ">
     <meta name="keywords" content="" /> 
-    <link rel="canonical" href="https://anoncoin.net/Atcoin_clearnet_conf/">
+    <link rel="canonical" href="https://atcoin.net/Atcoin_address/">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
 
     <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
@@ -158,7 +158,7 @@
                     <ul class="dropdown-menu">
                          
                         <li>
-                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU">Slack</a>
+                            <a href="https://join.slack.com/t/atcoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU">Slack</a>
                         </li>
                           
                         <li>
@@ -174,7 +174,7 @@
                         </li>
                           
                         <li>
-                            <a href="https://twitter.com/anoncoinproject">Official Twitter</a>
+                            <a href="https://twitter.com/atcoinproject">Official Twitter</a>
                         </li>
                           
                         <li>
@@ -195,7 +195,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12 text-center">
-            <h1>Atcoin clearnet configuration.</h1>
+            <h1>Atcoin address</h1>
         </div>
     </div>
     <div class="row">
@@ -203,164 +203,45 @@
             <p>
 
     
-    <p class="post-date"><i>Updated: Oct 28, 2017</i></p>
+    <p class="post-date"><i>Updated: Nov 10, 2017</i></p>
     
 
-    <p>Name this file anoncoin.conf and saved it in:</p>
+    <p>An <strong><a href="/About_Atcoin/">Atcoin</a> address</strong> is an identifier of 27-34 alphanumeric characters, beginning with the letter <strong>A</strong>, that represents a possible destination for an atcoin payment. Addresses can be generated at no cost by any user, and the user can have as many addresses as desired. An example of an Atcoin address is <a href="/Donate/">Acoin7tkEib9d8BfomQYUK66z5fhwN3DgV</a>.</p>
 
-<h4 id="windows">Windows:</h4>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%appdata%/anoncoin   
-</code></pre></div></div>
-<h4 id="linuxmacos">Linux/MacOS:</h4>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~/.anoncoin
-</code></pre></div></div>
+<h2 id="an-atcoin-address-is-like-an-e-mail-address">An Atcoin address is like an e-mail address</h2>
 
-<h4 id="anoncoinconf">anoncoin.conf</h4>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>daemon=1
-server=1
-rpcuser=************USER***************       #Change it! (no need to remember)
-rpcpassword=**************SECRETPASS********* #Change it! (no need to remember)  
-paytxfee=0.0001
+<p>Like e-mail, you can send atcoins to a person by sending atcoins to one of their addresses. For increased privacy, a person can have many different addresses. To simply accounting, a different address can be used for each type of transaction.</p>
 
-#rpcallowip=192.168.0.0/24
-#rpcallowip=192.168.2.0/255.255.255.0
-#rpcbind=192.168.2.55
-#rpcconnect=192.168.2.55
-#rpcwait=1
- 
-#rest=1 
+<h2 id="addresses-can-be-created-offline">Addresses can be created offline</h2>
 
-#rpcssl=1
-#rpcsslcertificatechainfile
-#rpcsslprivatekeyfile
-#rpcsslciphers
-#rpcport=443
+<p>Creating addresses can be done without an internet connection and does not require any contact or registration with the atcoin network. The network starts tracking an address when it is first seen in a valid payment transaction.</p>
 
-############ Running a version of ONLYNET:       
-#If everything is commented out, then we are in mixed mode (clearnet only if [i2p.options] enabled=0)
+<p>It is possible to create large batches of addresses offline using freely available software tools. Generating batches of addresses is useful in several scenarios, such as e-commerce websites where a unique pre-generated address is dispensed to each customer.</p>
 
-#onlynet=i2p       # I2P-only enabled!
-#onlynet=ipv4     # IPV4 disabled!
-#onlynet=ipv6
-#onlynet=tor
-#onlynet=onion 
+<p>An average desktop computer can generate thousands of new addresses per minute. Addresses are created simply by generating random numbers and then performing mathematical operations to derive matching pairs of “public” and “private” keys. Because addresses can be created easily and at minimal cost, it is not uncommon to create temporary addresses that can be discarded if unused.</p>
 
+<h2 id="addresses-are-case-sensitive-and-exact">Addresses are case sensitive and exact</h2>
 
-############ MISC Settings
+<p>Atcoin addresses are case-sensitive. Addresses should be copied and pasted using the computer’s clipboard wherever possible. If you hand-key an address, and each character is not transcribed exactly - including capitalization - the incorrect address will most likely be rejected by the software. The probability that a mistyped address is accepted as being valid is 1 in 2<sup>32</sup>, that is, approximately 1 in 4.29 billion.</p>
 
-#stopafterblockimport=1      # useful when using bootstrap.dat, to shutdown the qt-client when file-synching is done
-#loadblock=/home/groundrod/.anoncoin/blocks-src/blk00000.dat #to use raw blk#####.dat instead of bootstrap.dat 
+<h2 id="addresses-have-a-private-key">Addresses have a “private key”</h2>
 
-#bind=192.168.0.11   # set this node local-network address if you do a multi-nodes local network or for port-forwarding, else comment it!
-#whitelist=192.168.0.11      #c hange this to another local node local-network address to allow it to connect!
-#whitebind=192.168.2.55
+<p>For most properly-generated addresses, there is at least one secret number known as a private key which is required for access to the funds assigned to that address.</p>
 
-#checkblocks=50000
+<p>When using the Atcoin client, private keys are typically stored in the wallet file. For security (see <a href="/Securing_your_wallet/">Securing your wallet</a>), the wallet should be encrypted. The private key has a special purpose - it is mathematically needed to create valid transactions that spend the funds originally sent to the address. If the private key to an address is lost (for example, in a hard drive crash, fire or other natural disaster), any associated coins are effectively lost forever.</p>
 
-#externalip=???
-#connect=192.168.0.101    # only connect to this node 
+<h2 id="whats-in-an-address">What’s in an address</h2>
 
-#listen=1 # NOTE: Listen only refers to clearnet IPs, I2P always listens, if enabled.
-#discover=0    # Try to discover our own IP address
-#upnp=1    # enable upnp to open port for inbound connection on clearnet
+<p>Most atcoin addresses are 34 characters long. They consist of random digits and uppercase and lowercase letters, with the exception that the uppercase letter “O”, uppercase letter “I”, lowercase letter “l”, and the number “0” are never used to prevent visual ambiguity. Some addresses can be shorter than 34 characters (as few as 27 in theory) and still be valid. A significant percentage of addresses are only 33 characters, and some addresses may be even shorter.</p>
 
-#dns=0
-#dnsseed=1
-#forcednsseed=1
+<p>Several of the characters inside an Atcoin address are used as a checksum so that typographical errors can be automatically found and rejected. The checksum also allows the software to confirm that a 33-character (or shorter) address is in fact valid and isn’t simply an address with a missing character.</p>
 
-#stfu=1    # Tired of the 'running on clearnet warning' during startup?  Try this... 
+<h2 id="see-also">See also</h2>
 
-#txindex=0    #enable it to use multisig transactions
-dbcache=400   #larger peer address space supported by Atcoin for I2P
-
-############ Debugging Options
-
-#checkblockindex=1
-#checkmempool=1
-#logips=1
-#logtimestamps=0
-
-#debug=    # enable ALL debug category except bench and estimatefee
-
-#debug=addrman    # category specific debug log
-#debug=alert
-#debug=coindb
-#debug=db
-#debug=lock
-#debug=gui
-#debug=mempool
-#debug=net
-#debug=rand
-#debug=retarget
-#debug=rpc
-#debug=rpcio
-#debug=selectcoins
-#debug=timedata
-#debug=version
-
-#debug=bench
-#debug=estimatefee
-
-############ Mining Options, enable TestNet and start a new one with initial conditions valid.
-
-#keypool=100
-
-#gen=0
-#genproclimit=1
-
-rpcport=9376  # The default MainNet RPC port
-#rpcport=9377 # The default TestNet RPC port
-
-#testnet=0
-#testnetstart=0             # only one master per testnet! For the master it has to be testnetstart=1
-
-#utctimeisknown=1
-
-
-############ New RetargetPID parameter control and csv file logging options in this new [ ] section
-
-[retargetpid]
-
-# HARDCODED VALUES
-
-retargetcsv=0
-
-############ Atcoin IP2 network Destination settings.
-
-[i2p.mydestination]
-static=1          # uncomment after having copied the "privatekey" parameter below
-#privatekey=       # copy here the settings-&gt;I2P Destination details-&gt; "privatekey" parameter and remove the #
-
-shareaddr=1       # sharing of dynamic and static I2P address is enabled by default.
-
-############ Atcoin IP2 Options settings.
-
-[i2p.options]
-enabled=0             # here i2p is disabled for clearnet only mode, enable for i2p
-samhost=127.0.0.1     # set to I2P-SAM local address of the I2P router, after enabling SAM in it
-samport=7656
-sessionname=Atcoin-client
-extra=
-
-# Inbound parameters options
-[i2p.options.inbound]
-quantity=3
-length=3
-lengthvariance=0
-backupquantity=0
-allowzerohop=0
-iprestriction=2 
-
-# Outbound parameters options
-[i2p.options.outbound]
-quantity=3
-length=3
-lengthvariance=0
-backupquantity=0
-allowzerohop=0
-iprestriction=2
-priority=0
-</code></pre></div></div>
+<ul>
+  <li><a href="/About_Atcoin/">Atcoin</a></li>
+  <li><a href="/How_to_generate_an_Atcoin_vanity_address/">How to generate an Atcoin vanity address</a></li>
+</ul>
 
     <p class="spacer"></p>
     </div>
@@ -375,7 +256,7 @@ priority=0
                 <div class="footer-col col-md-4">
                     <h3>Contact</h3>
                     <p>
-                         info@anoncoin.net
+                         info@atcoin.net
                         <br> 
                     </p>
                 </div>
@@ -384,7 +265,7 @@ priority=0
                     <ul class="list-inline">
                         
                         <li>
-                            <a href="https://twitter.com/anoncoinproject" class="btn-social btn-outline">
+                            <a href="https://twitter.com/atcoinproject" class="btn-social btn-outline">
                                 <i class="fa fa-fw fa-twitter"></i>
                             </a>
                         </li>
@@ -408,7 +289,7 @@ priority=0
                         </li>
                         
                         <li>
-                            <a href="https://github.com/Atcoin/anoncoin" class="btn-social btn-outline">
+                            <a href="https://github.com/Atcoin/atcoin" class="btn-social btn-outline">
                                 <i class="fa fa-fw fa-github"></i>
                             </a>
                         </li>
@@ -418,7 +299,7 @@ priority=0
                 <div class="footer-col col-md-4">
                     <h3>Chat with us</h3>
                     <p>
-                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU
+                            <a href="https://join.slack.com/t/atcoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU
                             " class="btn btn-lg btn-outline">
                                 <i class="fa fa-slack"></i> Join our Slack
                             </a>

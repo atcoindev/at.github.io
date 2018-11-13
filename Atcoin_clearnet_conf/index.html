@@ -3,11 +3,11 @@
     <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Atcoin-cli commands</title>
+    <title>Atcoin clearnet configuration.</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Atcoin(ANC) is a unique decentralized peer to peer internet cryptocurrency that provides for its users. I2P and Tor compatible, it is resistant to crackdowns from hostile authorities.  ">
     <meta name="keywords" content="" /> 
-    <link rel="canonical" href="https://anoncoin.net/Atcoin-cli_commands/">
+    <link rel="canonical" href="https://atcoin.net/Atcoin_clearnet_conf/">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
 
     <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
@@ -158,7 +158,7 @@
                     <ul class="dropdown-menu">
                          
                         <li>
-                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU">Slack</a>
+                            <a href="https://join.slack.com/t/atcoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU">Slack</a>
                         </li>
                           
                         <li>
@@ -174,7 +174,7 @@
                         </li>
                           
                         <li>
-                            <a href="https://twitter.com/anoncoinproject">Official Twitter</a>
+                            <a href="https://twitter.com/atcoinproject">Official Twitter</a>
                         </li>
                           
                         <li>
@@ -195,7 +195,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12 text-center">
-            <h1>Atcoin-cli commands</h1>
+            <h1>Atcoin clearnet configuration.</h1>
         </div>
     </div>
     <div class="row">
@@ -203,107 +203,164 @@
             <p>
 
     
+    <p class="post-date"><i>Updated: Oct 28, 2017</i></p>
+    
 
-    <p>The following commands are to be typed in the Help -&gt; debug -&gt; console in anoncoin-qtc or else at the command line to anoncoin-cli, after having started anoncoind</p>
+    <p>Name this file atcoin.conf and saved it in:</p>
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">./anoncoind
-Atcoin server starting
-./anoncoin-cli help</code></pre></figure>
+<h4 id="windows">Windows:</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%appdata%/atcoin   
+</code></pre></div></div>
+<h4 id="linuxmacos">Linux/MacOS:</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~/.atcoin
+</code></pre></div></div>
 
-<p>This is the list of all commands:</p>
+<h4 id="atcoinconf">atcoin.conf</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>daemon=1
+server=1
+rpcuser=************USER***************       #Change it! (no need to remember)
+rpcpassword=**************SECRETPASS********* #Change it! (no need to remember)  
+paytxfee=0.0001
 
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">==</span> Blockchain <span class="o">==</span>
-getbestblockhash
-getblock &lt;“hash”&gt; [verbose]
-getblockchaininfo
-getblockcount
-getblockhash &lt;index&gt;
-getchaintips
-getdifficulty
-getmempoolinfo
-getrawmempool [verbose]
-gettxout &lt;“txid”&gt; &lt;n&gt; [includemempool]
-gettxoutproof &lt;“txid”,...&gt; [blockhash]
-gettxoutsetinfo
-verifychain [checklevel] [numblocks]
-verifytxoutproof &lt;“proof”&gt;
-<span class="o">==</span> Control <span class="o">==</span>
-getinfo
-<span class="nb">help</span> [“command”]
-stop
-<span class="o">==</span> Mining <span class="o">==</span>
-getblocktemplate [“jsonrequestobject”]
-getgenerate
-gethashmeter [clear]
-getmininginfo
-getnetworkhashps [blocks] [height]
-getretargetpid [height] [verbose]
-getwork [“data”]
-prioritisetransaction &lt;txid&gt; &lt;priority delta&gt; &lt;fee delta&gt;
-setgenerate &lt;generate&gt; [genproclimit]
-submitblock &lt;“hexdata”&gt; [“jsonparametersobject”]
-<span class="o">==</span> Network <span class="o">==</span>
-addnode &lt;“b32.i2p|base64|ip:port|ipv6”&gt; &lt;“add|remove|onetry”&gt;
-destination [“match|good|attempt|connect”] [“b32.i2p|base64|ip:port”]
-getaddednodeinfo &lt;dns&gt; [“node”]
-getconnectioncount
-getnettotals
-getnetworkinfo
-getpeerinfo
-ping
-<span class="o">==</span> Rawtransactions <span class="o">==</span>
-createrawtransaction [<span class="o">{</span>“txid”:“id”,“vout”:n<span class="o">}</span>,...] <span class="o">{</span>“address”:amount,...<span class="o">}</span>
-decoderawtransaction &lt;“hexstring”&gt;
-decodescript &lt;“hex”&gt;
-getrawtransaction &lt;“txid”&gt; [verbose]
-sendrawtransaction &lt;“hexstring”&gt; [allowhighfees]
-signrawtransaction &lt;“hexstring”&gt; <span class="o">(</span> [<span class="o">{</span>“txid”:“id”,“vout”:n,“scriptPubKey”:“hex”,“redeemScript”:“hex”<span class="o">}</span>,...] [“privatekey1”,...] sighashtype <span class="o">)</span>
-<span class="o">==</span> Util <span class="o">==</span>
-createmultisig &lt;nrequired&gt; &lt;<span class="o">[</span>“key”,...]&gt;
-estimatefee &lt;nblocks&gt;
-estimatepriority &lt;nblocks&gt;
-validateaddress &lt;“anoncoinaddress”&gt;
-verifymessage &lt;“address”&gt; &lt;“signature”&gt; &lt;“message”&gt;
-<span class="o">==</span> Wallet <span class="o">==</span>
-addmultisigaddress &lt;nrequired&gt; &lt;<span class="o">[</span>“key”,...]&gt; [“account”]
-backupwallet &lt;“destination”&gt;
-dumpprivkey &lt;“address”&gt;
-dumpwallet &lt;“filename”&gt;
-encryptwallet &lt;“passphrase”&gt;
-getaccount &lt;“anoncoinaddress”&gt;
-getaccountaddress &lt;“account”&gt;
-getaddressesbyaccount &lt;“account”&gt;
-getbalance [“account”] [minconf] [includeWatchonly]
-getnewaddress [“account”]
-getrawchangeaddress
-getreceivedbyaccount &lt;“account”&gt; [minconf]
-getreceivedbyaddress &lt;“address”&gt; [minconf]
-gettransaction &lt;“txid”&gt; [includeWatchonly]
-getunconfirmedbalance
-getwalletinfo
-importaddress &lt;address&gt; <span class="o">[</span>label] <span class="o">[</span><span class="nv">rescan</span><span class="o">=</span><span class="nb">true</span><span class="o">]</span>
-importprivkey &lt;“privkey”&gt; [“label”] [rescan]
-importwallet &lt;“filename”&gt; 
-keypoolrefill [newsize]
-listaccounts [minconf] [includeWatchonly]
-listaddressgroupings
-listlockunspent
-listreceivedbyaccount [minconf] [includeempty] [includeWatchonly]
-listreceivedbyaddress [minconf] [includeEmpty] [includeWatchonly]
-listsinceblock [“blockhash”] [target-confirmations] [includeWatchonly]
-listtransactions [“account”] [count] [from] [includeWatchonly]
-listunspent [minconf] [maxconf] [“address”,...] <span class="o">)</span>
-lockunspent &lt;unlock&gt; &lt;<span class="o">[{</span>“txid”:“txid”,“vout”:n<span class="o">}</span>,...]&gt;
-move &lt;“fromaccount”&gt; &lt;“toaccount”&gt; &lt;amount&gt; [minconf] [“comment”]
-sendfrom &lt;“fromaccount”&gt; &lt;“toanoncoinaddress”&gt; &lt;amount&gt; [minconf] [“comment”] [“comment-to”]
-sendmany &lt;“fromaccount”&gt; &lt;<span class="o">{</span>“address”:amount,...<span class="o">}&gt;</span> [minconf] [“comment”]
-sendtoaddress &lt;“anoncoinaddress”&gt; &lt;amount&gt; [“comment”] [“comment-to”]
-setaccount &lt;“address”&gt; &lt;“account”&gt;
-settxfee &lt;amount&gt;
-signmessage &lt;“anoncoinaddress”&gt; &lt;“message”&gt;
-walletlock
-walletpassphrase &lt;“passphrase”&gt; &lt;timeout&gt;
-walletpassphrasechange &lt;“oldpassphrase”&gt; &lt;“newpassphrase”&gt;</code></pre></figure>
+#rpcallowip=192.168.0.0/24
+#rpcallowip=192.168.2.0/255.255.255.0
+#rpcbind=192.168.2.55
+#rpcconnect=192.168.2.55
+#rpcwait=1
+ 
+#rest=1 
+
+#rpcssl=1
+#rpcsslcertificatechainfile
+#rpcsslprivatekeyfile
+#rpcsslciphers
+#rpcport=443
+
+############ Running a version of ONLYNET:       
+#If everything is commented out, then we are in mixed mode (clearnet only if [i2p.options] enabled=0)
+
+#onlynet=i2p       # I2P-only enabled!
+#onlynet=ipv4     # IPV4 disabled!
+#onlynet=ipv6
+#onlynet=tor
+#onlynet=onion 
+
+
+############ MISC Settings
+
+#stopafterblockimport=1      # useful when using bootstrap.dat, to shutdown the qt-client when file-synching is done
+#loadblock=/home/groundrod/.atcoin/blocks-src/blk00000.dat #to use raw blk#####.dat instead of bootstrap.dat 
+
+#bind=192.168.0.11   # set this node local-network address if you do a multi-nodes local network or for port-forwarding, else comment it!
+#whitelist=192.168.0.11      #c hange this to another local node local-network address to allow it to connect!
+#whitebind=192.168.2.55
+
+#checkblocks=50000
+
+#externalip=???
+#connect=192.168.0.101    # only connect to this node 
+
+#listen=1 # NOTE: Listen only refers to clearnet IPs, I2P always listens, if enabled.
+#discover=0    # Try to discover our own IP address
+#upnp=1    # enable upnp to open port for inbound connection on clearnet
+
+#dns=0
+#dnsseed=1
+#forcednsseed=1
+
+#stfu=1    # Tired of the 'running on clearnet warning' during startup?  Try this... 
+
+#txindex=0    #enable it to use multisig transactions
+dbcache=400   #larger peer address space supported by Atcoin for I2P
+
+############ Debugging Options
+
+#checkblockindex=1
+#checkmempool=1
+#logips=1
+#logtimestamps=0
+
+#debug=    # enable ALL debug category except bench and estimatefee
+
+#debug=addrman    # category specific debug log
+#debug=alert
+#debug=coindb
+#debug=db
+#debug=lock
+#debug=gui
+#debug=mempool
+#debug=net
+#debug=rand
+#debug=retarget
+#debug=rpc
+#debug=rpcio
+#debug=selectcoins
+#debug=timedata
+#debug=version
+
+#debug=bench
+#debug=estimatefee
+
+############ Mining Options, enable TestNet and start a new one with initial conditions valid.
+
+#keypool=100
+
+#gen=0
+#genproclimit=1
+
+rpcport=9376  # The default MainNet RPC port
+#rpcport=9377 # The default TestNet RPC port
+
+#testnet=0
+#testnetstart=0             # only one master per testnet! For the master it has to be testnetstart=1
+
+#utctimeisknown=1
+
+
+############ New RetargetPID parameter control and csv file logging options in this new [ ] section
+
+[retargetpid]
+
+# HARDCODED VALUES
+
+retargetcsv=0
+
+############ Atcoin IP2 network Destination settings.
+
+[i2p.mydestination]
+static=1          # uncomment after having copied the "privatekey" parameter below
+#privatekey=       # copy here the settings-&gt;I2P Destination details-&gt; "privatekey" parameter and remove the #
+
+shareaddr=1       # sharing of dynamic and static I2P address is enabled by default.
+
+############ Atcoin IP2 Options settings.
+
+[i2p.options]
+enabled=0             # here i2p is disabled for clearnet only mode, enable for i2p
+samhost=127.0.0.1     # set to I2P-SAM local address of the I2P router, after enabling SAM in it
+samport=7656
+sessionname=Atcoin-client
+extra=
+
+# Inbound parameters options
+[i2p.options.inbound]
+quantity=3
+length=3
+lengthvariance=0
+backupquantity=0
+allowzerohop=0
+iprestriction=2 
+
+# Outbound parameters options
+[i2p.options.outbound]
+quantity=3
+length=3
+lengthvariance=0
+backupquantity=0
+allowzerohop=0
+iprestriction=2
+priority=0
+</code></pre></div></div>
 
     <p class="spacer"></p>
     </div>
@@ -318,7 +375,7 @@ walletpassphrasechange &lt;“oldpassphrase”&gt; &lt;“newpassphrase”&gt;
                 <div class="footer-col col-md-4">
                     <h3>Contact</h3>
                     <p>
-                         info@anoncoin.net
+                         info@atcoin.net
                         <br> 
                     </p>
                 </div>
@@ -327,7 +384,7 @@ walletpassphrasechange &lt;“oldpassphrase”&gt; &lt;“newpassphrase”&gt;
                     <ul class="list-inline">
                         
                         <li>
-                            <a href="https://twitter.com/anoncoinproject" class="btn-social btn-outline">
+                            <a href="https://twitter.com/atcoinproject" class="btn-social btn-outline">
                                 <i class="fa fa-fw fa-twitter"></i>
                             </a>
                         </li>
@@ -351,7 +408,7 @@ walletpassphrasechange &lt;“oldpassphrase”&gt; &lt;“newpassphrase”&gt;
                         </li>
                         
                         <li>
-                            <a href="https://github.com/Atcoin/anoncoin" class="btn-social btn-outline">
+                            <a href="https://github.com/Atcoin/atcoin" class="btn-social btn-outline">
                                 <i class="fa fa-fw fa-github"></i>
                             </a>
                         </li>
@@ -361,7 +418,7 @@ walletpassphrasechange &lt;“oldpassphrase”&gt; &lt;“newpassphrase”&gt;
                 <div class="footer-col col-md-4">
                     <h3>Chat with us</h3>
                     <p>
-                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU
+                            <a href="https://join.slack.com/t/atcoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU
                             " class="btn btn-lg btn-outline">
                                 <i class="fa fa-slack"></i> Join our Slack
                             </a>

@@ -3,11 +3,11 @@
     <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Atcoin client</title>
+    <title>Atcoin-cli commands</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Atcoin(ANC) is a unique decentralized peer to peer internet cryptocurrency that provides for its users. I2P and Tor compatible, it is resistant to crackdowns from hostile authorities.  ">
     <meta name="keywords" content="" /> 
-    <link rel="canonical" href="https://anoncoin.net/Atcoin_client/">
+    <link rel="canonical" href="https://atcoin.net/Atcoin-cli_commands/">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
 
     <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
@@ -158,7 +158,7 @@
                     <ul class="dropdown-menu">
                          
                         <li>
-                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU">Slack</a>
+                            <a href="https://join.slack.com/t/atcoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU">Slack</a>
                         </li>
                           
                         <li>
@@ -174,7 +174,7 @@
                         </li>
                           
                         <li>
-                            <a href="https://twitter.com/anoncoinproject">Official Twitter</a>
+                            <a href="https://twitter.com/atcoinproject">Official Twitter</a>
                         </li>
                           
                         <li>
@@ -195,7 +195,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12 text-center">
-            <h1>Atcoin client</h1>
+            <h1>Atcoin-cli commands</h1>
         </div>
     </div>
     <div class="row">
@@ -204,18 +204,106 @@
 
     
 
-    <div class="center">
-  <p><img src="/img/Wallet2.jpg" alt="Logo" /></p>
-</div>
+    <p>The following commands are to be typed in the Help -&gt; debug -&gt; console in atcoin-qtc or else at the command line to atcoin-cli, after having started atcoind</p>
 
-<p><strong>Atcoin-Qt</strong> is the Atcoin client that is maintained by the Atcoin developers. It is based on the Litecoin-Qt and Bitcoin-Qt clients. It supports the <a href="/I2P/">I2P</a> darknet and notifies you at startup if you are running on clearnet.</p>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">./atcoind
+Atcoin server starting
+./atcoin-cli help</code></pre></figure>
 
-<h2 id="external-links">External Links</h2>
+<p>This is the list of all commands:</p>
 
-<ul>
-  <li><a href="/Download/">Download the Atcoin-Qt Wallet</a></li>
-  <li><a href="https://github.com/Atcoin/anoncoin">The Atcoin source code</a></li>
-</ul>
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="o">==</span> Blockchain <span class="o">==</span>
+getbestblockhash
+getblock &lt;“hash”&gt; [verbose]
+getblockchaininfo
+getblockcount
+getblockhash &lt;index&gt;
+getchaintips
+getdifficulty
+getmempoolinfo
+getrawmempool [verbose]
+gettxout &lt;“txid”&gt; &lt;n&gt; [includemempool]
+gettxoutproof &lt;“txid”,...&gt; [blockhash]
+gettxoutsetinfo
+verifychain [checklevel] [numblocks]
+verifytxoutproof &lt;“proof”&gt;
+<span class="o">==</span> Control <span class="o">==</span>
+getinfo
+<span class="nb">help</span> [“command”]
+stop
+<span class="o">==</span> Mining <span class="o">==</span>
+getblocktemplate [“jsonrequestobject”]
+getgenerate
+gethashmeter [clear]
+getmininginfo
+getnetworkhashps [blocks] [height]
+getretargetpid [height] [verbose]
+getwork [“data”]
+prioritisetransaction &lt;txid&gt; &lt;priority delta&gt; &lt;fee delta&gt;
+setgenerate &lt;generate&gt; [genproclimit]
+submitblock &lt;“hexdata”&gt; [“jsonparametersobject”]
+<span class="o">==</span> Network <span class="o">==</span>
+addnode &lt;“b32.i2p|base64|ip:port|ipv6”&gt; &lt;“add|remove|onetry”&gt;
+destination [“match|good|attempt|connect”] [“b32.i2p|base64|ip:port”]
+getaddednodeinfo &lt;dns&gt; [“node”]
+getconnectioncount
+getnettotals
+getnetworkinfo
+getpeerinfo
+ping
+<span class="o">==</span> Rawtransactions <span class="o">==</span>
+createrawtransaction [<span class="o">{</span>“txid”:“id”,“vout”:n<span class="o">}</span>,...] <span class="o">{</span>“address”:amount,...<span class="o">}</span>
+decoderawtransaction &lt;“hexstring”&gt;
+decodescript &lt;“hex”&gt;
+getrawtransaction &lt;“txid”&gt; [verbose]
+sendrawtransaction &lt;“hexstring”&gt; [allowhighfees]
+signrawtransaction &lt;“hexstring”&gt; <span class="o">(</span> [<span class="o">{</span>“txid”:“id”,“vout”:n,“scriptPubKey”:“hex”,“redeemScript”:“hex”<span class="o">}</span>,...] [“privatekey1”,...] sighashtype <span class="o">)</span>
+<span class="o">==</span> Util <span class="o">==</span>
+createmultisig &lt;nrequired&gt; &lt;<span class="o">[</span>“key”,...]&gt;
+estimatefee &lt;nblocks&gt;
+estimatepriority &lt;nblocks&gt;
+validateaddress &lt;“atcoinaddress”&gt;
+verifymessage &lt;“address”&gt; &lt;“signature”&gt; &lt;“message”&gt;
+<span class="o">==</span> Wallet <span class="o">==</span>
+addmultisigaddress &lt;nrequired&gt; &lt;<span class="o">[</span>“key”,...]&gt; [“account”]
+backupwallet &lt;“destination”&gt;
+dumpprivkey &lt;“address”&gt;
+dumpwallet &lt;“filename”&gt;
+encryptwallet &lt;“passphrase”&gt;
+getaccount &lt;“atcoinaddress”&gt;
+getaccountaddress &lt;“account”&gt;
+getaddressesbyaccount &lt;“account”&gt;
+getbalance [“account”] [minconf] [includeWatchonly]
+getnewaddress [“account”]
+getrawchangeaddress
+getreceivedbyaccount &lt;“account”&gt; [minconf]
+getreceivedbyaddress &lt;“address”&gt; [minconf]
+gettransaction &lt;“txid”&gt; [includeWatchonly]
+getunconfirmedbalance
+getwalletinfo
+importaddress &lt;address&gt; <span class="o">[</span>label] <span class="o">[</span><span class="nv">rescan</span><span class="o">=</span><span class="nb">true</span><span class="o">]</span>
+importprivkey &lt;“privkey”&gt; [“label”] [rescan]
+importwallet &lt;“filename”&gt; 
+keypoolrefill [newsize]
+listaccounts [minconf] [includeWatchonly]
+listaddressgroupings
+listlockunspent
+listreceivedbyaccount [minconf] [includeempty] [includeWatchonly]
+listreceivedbyaddress [minconf] [includeEmpty] [includeWatchonly]
+listsinceblock [“blockhash”] [target-confirmations] [includeWatchonly]
+listtransactions [“account”] [count] [from] [includeWatchonly]
+listunspent [minconf] [maxconf] [“address”,...] <span class="o">)</span>
+lockunspent &lt;unlock&gt; &lt;<span class="o">[{</span>“txid”:“txid”,“vout”:n<span class="o">}</span>,...]&gt;
+move &lt;“fromaccount”&gt; &lt;“toaccount”&gt; &lt;amount&gt; [minconf] [“comment”]
+sendfrom &lt;“fromaccount”&gt; &lt;“toatcoinaddress”&gt; &lt;amount&gt; [minconf] [“comment”] [“comment-to”]
+sendmany &lt;“fromaccount”&gt; &lt;<span class="o">{</span>“address”:amount,...<span class="o">}&gt;</span> [minconf] [“comment”]
+sendtoaddress &lt;“atcoinaddress”&gt; &lt;amount&gt; [“comment”] [“comment-to”]
+setaccount &lt;“address”&gt; &lt;“account”&gt;
+settxfee &lt;amount&gt;
+signmessage &lt;“atcoinaddress”&gt; &lt;“message”&gt;
+walletlock
+walletpassphrase &lt;“passphrase”&gt; &lt;timeout&gt;
+walletpassphrasechange &lt;“oldpassphrase”&gt; &lt;“newpassphrase”&gt;</code></pre></figure>
 
     <p class="spacer"></p>
     </div>
@@ -230,7 +318,7 @@
                 <div class="footer-col col-md-4">
                     <h3>Contact</h3>
                     <p>
-                         info@anoncoin.net
+                         info@atcoin.net
                         <br> 
                     </p>
                 </div>
@@ -239,7 +327,7 @@
                     <ul class="list-inline">
                         
                         <li>
-                            <a href="https://twitter.com/anoncoinproject" class="btn-social btn-outline">
+                            <a href="https://twitter.com/atcoinproject" class="btn-social btn-outline">
                                 <i class="fa fa-fw fa-twitter"></i>
                             </a>
                         </li>
@@ -263,7 +351,7 @@
                         </li>
                         
                         <li>
-                            <a href="https://github.com/Atcoin/anoncoin" class="btn-social btn-outline">
+                            <a href="https://github.com/Atcoin/atcoin" class="btn-social btn-outline">
                                 <i class="fa fa-fw fa-github"></i>
                             </a>
                         </li>
@@ -273,7 +361,7 @@
                 <div class="footer-col col-md-4">
                     <h3>Chat with us</h3>
                     <p>
-                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU
+                            <a href="https://join.slack.com/t/atcoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU
                             " class="btn btn-lg btn-outline">
                                 <i class="fa fa-slack"></i> Join our Slack
                             </a>

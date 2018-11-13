@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Atcoin(ANC) is a unique decentralized peer to peer internet cryptocurrency that provides for its users. I2P and Tor compatible, it is resistant to crackdowns from hostile authorities.  ">
     <meta name="keywords" content="" /> 
-    <link rel="canonical" href="https://anoncoin.net/How_to_setup_Atcoin_to_use_Tor/">
+    <link rel="canonical" href="https://atcoin.net/How_to_setup_Atcoin_to_use_Tor/">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
 
     <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
@@ -158,7 +158,7 @@
                     <ul class="dropdown-menu">
                          
                         <li>
-                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU">Slack</a>
+                            <a href="https://join.slack.com/t/atcoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU">Slack</a>
                         </li>
                           
                         <li>
@@ -174,7 +174,7 @@
                         </li>
                           
                         <li>
-                            <a href="https://twitter.com/anoncoinproject">Official Twitter</a>
+                            <a href="https://twitter.com/atcoinproject">Official Twitter</a>
                         </li>
                           
                         <li>
@@ -210,7 +210,7 @@
 
 <p>Although Tor can help conceal your location and keep your internet traffic private, you can be deanonymized if an attacker controls both your entry and exit points to and from the Tor network. Hidden services <a href="https://blog.torproject.org/blog/thoughts-and-concerns-about-operation-onymous">have</a> been deanonymized by national security agencies, and these attacks will become more sophisticated as Tor research continues. Atcoin was built to take advantage of the superior I2P anonymizing network. We can only advocate using Tor with Atcoin if privacy is absolutely required, and if it is not possible to access the I2P network.</p>
 
-<h2 id="running-the-anoncoin-qt-client-behind-a-tor-proxy">Running the Atcoin-Qt client behind a Tor proxy</h2>
+<h2 id="running-the-atcoin-qt-client-behind-a-tor-proxy">Running the Atcoin-Qt client behind a Tor proxy</h2>
 
 <p>To set up the Qt client to work with Tor, follow these easy steps.</p>
 
@@ -225,7 +225,7 @@
 
 <p>That’s it!</p>
 
-<h2 id="running-the-anoncoin-daemon-anoncoind-behind-a-tor-proxy">Running the Atcoin daemon (anoncoind) behind a Tor proxy</h2>
+<h2 id="running-the-atcoin-daemon-atcoind-behind-a-tor-proxy">Running the Atcoin daemon (atcoind) behind a Tor proxy</h2>
 
 <p>The Atcoin daemon (run at the command line) accepts the following Tor-related options:</p>
 
@@ -244,17 +244,17 @@
 
 <p>When behind a Tor proxy, you can specify .onion addresses instead of IP addresses or hostnames in these parameters.</p>
 
-<p>In a typical situation, it suffices to use this command to run <code class="highlighter-rouge">anoncoind</code> behind a Tor proxy:</p>
+<p>In a typical situation, it suffices to use this command to run <code class="highlighter-rouge">atcoind</code> behind a Tor proxy:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anoncoind -proxy=127.0.0.1:9050
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>atcoind -proxy=127.0.0.1:9050
 </code></pre></div></div>
 
 <p>If you want to connect only to Tor hidden services, and not to nodes that are reachable by IPv4/v6 (via Tor), then use</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anoncoind -onion=127.0.0.1:9050 -onlynet=tor
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>atcoind -onion=127.0.0.1:9050 -onlynet=tor
 </code></pre></div></div>
 
-<p>If desired, the command line options can be set directly in the <code class="highlighter-rouge">anoncoin.conf</code> file using the syntax</p>
+<p>If desired, the command line options can be set directly in the <code class="highlighter-rouge">atcoin.conf</code> file using the syntax</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>proxy=127.0.0.1:9050
 onion=127.0.0.1:9050
@@ -266,15 +266,15 @@ seednode=xxxx.onion
 
 <p>Note that it is possible to set both <code class="highlighter-rouge">onlynet=tor</code> and <code class="highlighter-rouge">onlynet=i2p</code>, so that all traffic is sent through either I2P or Tor hidden servers.</p>
 
-<h2 id="how-to-run-an-anoncoin-tor-hidden-service">How to run an Atcoin Tor hidden service</h2>
+<h2 id="how-to-run-an-atcoin-tor-hidden-service">How to run an Atcoin Tor hidden service</h2>
 
 <p>If you have set up Atcoin to run behind a Tor proxy, it is simple to make your node reachable from the Tor network by creating a hidden service. First, add these lines to your <code class="highlighter-rouge">torrc</code> configuration file (found in /etc/tor/, or /usr/local/etc/tor/)</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HiddenServiceDir /var/lib/tor/anoncoin-service/
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>HiddenServiceDir /var/lib/tor/atcoin-service/
 HiddenServicePort 9377 127.0.0.1:9377
 </code></pre></div></div>
 
-<p>The hidden service directory can be different than above: On OSX use “<code class="highlighter-rouge">~/Library/Application</code><code class="highlighter-rouge"> </code><code class="highlighter-rouge">Support/Tor/anoncoin-service</code>”. After restarting Tor, the hidden service directory should contain two new files, with the file <code class="highlighter-rouge">hostname</code> containing your .onion address. When starting <code class="highlighter-rouge">anoncoind</code>, the following parameters, in addition to those of the previous section, can then be set:</p>
+<p>The hidden service directory can be different than above: On OSX use “<code class="highlighter-rouge">~/Library/Application</code><code class="highlighter-rouge"> </code><code class="highlighter-rouge">Support/Tor/atcoin-service</code>”. After restarting Tor, the hidden service directory should contain two new files, with the file <code class="highlighter-rouge">hostname</code> containing your .onion address. When starting <code class="highlighter-rouge">atcoind</code>, the following parameters, in addition to those of the previous section, can then be set:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>-externalip=xxxx.onion
 </code></pre></div></div>
@@ -290,12 +290,12 @@ HiddenServicePort 9377 127.0.0.1:9377
 
 <p>When <code class="highlighter-rouge">-externalip</code> is specified, no attempt is made to discover local IPv4 or IPv6 addresses. If you want to be reachable from both Tor and IPv4/v6, you’ll need to either pass your other addresses using <code class="highlighter-rouge">-externalip</code>, or explicitly enable <code class="highlighter-rouge">-discover</code>. Note that your onion and IPv4/v6 addresses may be easily linkable using traffic analysis.</p>
 
-<p>In a typical situation, where you are only reachable via Tor onion addresses, it should only be necessary to start anoncoind with the following options:</p>
+<p>In a typical situation, where you are only reachable via Tor onion addresses, it should only be necessary to start atcoind with the following options:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anoncoind -onion=127.0.0.1:9050 -externalip=xxxx.onion -listen -onlynet=tor
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>atcoind -onion=127.0.0.1:9050 -externalip=xxxx.onion -listen -onlynet=tor
 </code></pre></div></div>
 
-<p>The above command line options are most easily set in the file <code class="highlighter-rouge">anoncoin.conf</code>, as opposed to specifying them each time <code class="highlighter-rouge">anoncoind</code> is run:</p>
+<p>The above command line options are most easily set in the file <code class="highlighter-rouge">atcoin.conf</code>, as opposed to specifying them each time <code class="highlighter-rouge">atcoind</code> is run:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>externalip=xxxx.onion
 listen=1
@@ -305,32 +305,32 @@ onlynet=tor
 
 <p>If you don’t care too much about hiding your node, and want to be reachable on IPv4/v6 as well, specify:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anoncoind -onion=127.0.0.1:9050 -externalip=xxxx.onion -listen -discover
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>atcoind -onion=127.0.0.1:9050 -externalip=xxxx.onion -listen -discover
 </code></pre></div></div>
 
 <p>This last option is the best for supporting the Atcoin network.</p>
 
 <h2 id="connecting-to-a-tor-hidden-server">Connecting to a Tor hidden server</h2>
 
-<p>The anoncoin client will generally find Tor hidden services to connect to. If you would like to connect to a specific Tor hidden service, this can be done using one of three methods. First, if <code class="highlighter-rouge">anoncoind</code> is already running, the following command can be issued in the terminal:</p>
+<p>The atcoin client will generally find Tor hidden services to connect to. If you would like to connect to a specific Tor hidden service, this can be done using one of three methods. First, if <code class="highlighter-rouge">atcoind</code> is already running, the following command can be issued in the terminal:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anoncoin-cli addnode xxxx.onion add
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>atcoin-cli addnode xxxx.onion add
 </code></pre></div></div>
 
-<p>Alternatively, the node can be added directly to the <code class="highlighter-rouge">anoncoin.conf</code> file using the syntax (one for each node):</p>
+<p>Alternatively, the node can be added directly to the <code class="highlighter-rouge">atcoin.conf</code> file using the syntax (one for each node):</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>addnode xxxx.onion add
 </code></pre></div></div>
 
-<p>Lastly, <code class="highlighter-rouge">anoncoind</code> can be started with the option</p>
+<p>Lastly, <code class="highlighter-rouge">atcoind</code> can be started with the option</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anoncoind -addnode=xxxx.onion
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>atcoind -addnode=xxxx.onion
 </code></pre></div></div>
 
 <h2 id="known-tor-hidden-servers">Known Tor hidden servers</h2>
 
 <ul>
-  <li>anoncoinmpkoerba.onion</li>
+  <li>atcoinmpkoerba.onion</li>
   <li>kjwhbac5hwwdimq7.onion</li>
   <li>isdze75oiisc6kvj.onion</li>
 </ul>
@@ -355,7 +355,7 @@ onlynet=tor
                 <div class="footer-col col-md-4">
                     <h3>Contact</h3>
                     <p>
-                         info@anoncoin.net
+                         info@atcoin.net
                         <br> 
                     </p>
                 </div>
@@ -364,7 +364,7 @@ onlynet=tor
                     <ul class="list-inline">
                         
                         <li>
-                            <a href="https://twitter.com/anoncoinproject" class="btn-social btn-outline">
+                            <a href="https://twitter.com/atcoinproject" class="btn-social btn-outline">
                                 <i class="fa fa-fw fa-twitter"></i>
                             </a>
                         </li>
@@ -388,7 +388,7 @@ onlynet=tor
                         </li>
                         
                         <li>
-                            <a href="https://github.com/Atcoin/anoncoin" class="btn-social btn-outline">
+                            <a href="https://github.com/Atcoin/atcoin" class="btn-social btn-outline">
                                 <i class="fa fa-fw fa-github"></i>
                             </a>
                         </li>
@@ -398,7 +398,7 @@ onlynet=tor
                 <div class="footer-col col-md-4">
                     <h3>Chat with us</h3>
                     <p>
-                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU
+                            <a href="https://join.slack.com/t/atcoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU
                             " class="btn btn-lg btn-outline">
                                 <i class="fa fa-slack"></i> Join our Slack
                             </a>

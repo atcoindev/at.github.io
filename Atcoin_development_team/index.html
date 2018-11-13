@@ -3,11 +3,11 @@
     <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Atcoin I2P configuration.</title>
+    <title>Atcoin development team</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Atcoin(ANC) is a unique decentralized peer to peer internet cryptocurrency that provides for its users. I2P and Tor compatible, it is resistant to crackdowns from hostile authorities.  ">
     <meta name="keywords" content="" /> 
-    <link rel="canonical" href="https://anoncoin.net/Atcoin_I2P_conf/">
+    <link rel="canonical" href="https://atcoin.net/Atcoin_development_team/">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
 
     <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
@@ -158,7 +158,7 @@
                     <ul class="dropdown-menu">
                          
                         <li>
-                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU">Slack</a>
+                            <a href="https://join.slack.com/t/atcoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU">Slack</a>
                         </li>
                           
                         <li>
@@ -174,7 +174,7 @@
                         </li>
                           
                         <li>
-                            <a href="https://twitter.com/anoncoinproject">Official Twitter</a>
+                            <a href="https://twitter.com/atcoinproject">Official Twitter</a>
                         </li>
                           
                         <li>
@@ -195,7 +195,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12 text-center">
-            <h1>Atcoin I2P configuration.</h1>
+            <h1>Atcoin development team</h1>
         </div>
     </div>
     <div class="row">
@@ -203,165 +203,115 @@
             <p>
 
     
-    <p class="post-date"><i>Updated: Oct 28, 2017</i></p>
+    <p class="post-date"><i>Updated: Jul 14, 2018</i></p>
     
 
-    <p>Name this file anoncoin.conf and saved it in:</p>
+    <p>The Atcoin team is composed of a set of core developers and active community members. We are always looking for new members, and we encourage all people who are concerned about anonymity and online privacy to get involved. Atcoin will only be as good as the community that is supporting it.</p>
 
-<h4 id="windows">Windows:</h4>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%appdata%/anoncoin   
-</code></pre></div></div>
-<h4 id="linuxmacos">Linux/MacOS:</h4>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~/.anoncoin
-</code></pre></div></div>
+<p>For the sake of transparency, we are showing here of the active and inactive Atcoin developers. Some of the developers have been with the project since the beginning, some just joined us. October 2017 the original founder of the project, Meeh, returned to the project. 3 new developers decided to join the project at the same time.</p>
 
-<h4 id="anoncoinconf">anoncoin.conf</h4>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-daemon=1
-server=1
-rpcuser=************USER***************                     #Change it! (no need to remember)
-rpcpassword=**************SECRETPASS*********               #Change it! (no need to remember)  
-paytxfee=0.0001
+<p>The best way to get in touch with us is to join Slack, <a href="https://join.slack.com/t/atcoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU">click here to join.</a></p>
 
-#rpcallowip=192.168.0.0/24
-#rpcallowip=192.168.2.0/255.255.255.0
-#rpcbind=192.168.2.55
-#rpcconnect=192.168.2.55
-#rpcwait=1
- 
-#rest=1 
+<h2 id="development-team">Development team</h2>
 
-#rpcssl=1
-#rpcsslcertificatechainfile
-#rpcsslprivatekeyfile
-#rpcsslciphers
-#rpcport=443
+<h3 id="meeh">Meeh</h3>
 
-############ Running a version of ONLYNET:       #If everything is commented out, then we are in mixed mode (clearnet and I2P if [i2p.options] enabled=1)
+<p><em>Founder, Atcoin Core Lead Developer</em></p>
 
-onlynet=i2p       # I2P-only enabled!
-#onlynet=ipv4     # IPV4 disabled!
-#onlynet=ipv6
-#onlynet=tor
-#onlynet=onion 
+<p>Meeh has strong beliefs that the Atcoin project is a necessary step to take as the central banks are in motion to prevent trading of popular cryptocurrencies.</p>
 
+<h3 id="groundrod">GroundRod</h3>
 
-############ MISC Settings
+<p><em>Atcoin Core Lead Developer</em></p>
 
-#stopafterblockimport=1      # useful when using bootstrap.dat, to shutdown the qt-client when file-synching is done
-#loadblock=/home/groundrod/.anoncoin/blocks-src/blk00000.dat #to use raw blk#####.dat instead of bootstrap.dat 
+<p>GroundRod ported the Atcoin Core codebase to the new 0.10 version and of updating the I2PSAM module to get the smoothest running build. He is very knowledgeable in computer code and testing software and has an extensive comprehension of the Atcoin and Bitcoin code.</p>
 
-#bind=192.168.0.11   # set this node local-network address if you do a multi-nodes local network or for port-forwarding, else comment it!
-#whitelist=192.168.0.11      #c hange this to another local node local-network address to allow it to connect!
-#whitebind=192.168.2.55
+<h3 id="k1773r">K1773R</h3>
 
-#checkblocks=50000
+<p><em>Security, Developer</em></p>
 
-#externalip=???
-#connect=192.168.0.101    # only connect to this node 
+<p>K1773R is a solid developer with security in mind. K1773R has worked on other cryptocurrency projects before joining the Atcoin development team.</p>
 
-#listen=1 # NOTE: Listen only refers to clearnet IPs, I2P always listens, if enabled.
-#discover=0    # Try to discover our own IP address
-#upnp=1    # enable upnp to open port for inbound connection on clearnet
+<h3 id="gnosis">Gnosis</h3>
 
-#dns=0
-#dnsseed=1
-#forcednsseed=1
+<p><em>Cryptography, Zerocoin Developer</em></p>
 
-#stfu=1    # Tired of the 'running on clearnet warning' during startup?  Try this... 
+<p>Gnosis has an in-depth understanding of cryptography and will be a valuable resource during our implementation of Zerocoin. He has successfully launched our testing phase of RSA-UFOs, which is a critical precursor to our trustless implementation of Zerocoin.</p>
 
-#txindex=0    #enable it to use multisig transactions
-dbcache=400   #larger peer address space supported by Atcoin for I2P
+<h3 id="orignal">Orignal</h3>
 
-############ Debugging Options
+<p><em>I2P Networking, LibI2Pd Developer, AncI2Pd Developer</em></p>
 
-#checkblockindex=1
-#checkmempool=1
-#logips=1
-#logtimestamps=0
+<p>Orignal is the developer of LibI2Pd, and the original developer of I2Pd, a C++ based router for the I2P darknet. He is unremittingly working for the integration of the router into Atcoin (AncI2pd project).</p>
 
-#debug=    # enable ALL debug category except bench and estimatefee
+<h3 id="mrebum">Mrebum</h3>
 
-#debug=addrman    # category specific debug log
-#debug=alert
-#debug=coindb
-#debug=db
-#debug=lock
-#debug=gui
-#debug=mempool
-#debug=net
-#debug=rand
-#debug=retarget
-#debug=rpc
-#debug=rpcio
-#debug=selectcoins
-#debug=timedata
-#debug=version
+<p><em>Themes Compatibility, QT’s CSS Developer</em></p>
 
-#debug=bench
-#debug=estimatefee
+<p>Mrebum has a few decades as a programmer and engineer. He has ported the use of customizable qss stylesheet based themes for the QT wallet.</p>
 
-############ Mining Options, enable TestNet and start a new one with initial conditions valid.
+<h3 id="lunokhod">Lunokhod</h3>
 
-#keypool=100
+<p><em>Documentation, Project Manager</em></p>
 
-#gen=0
-#genproclimit=1
+<p>Lunokhod is responsible for overseeing the project, documentation, website and wiki. He brings with him several years of experience as the leader of a scientific research lab and as the editor-in-chief of a major scientific journal.</p>
 
-rpcport=9376  # The default MainNet RPC port
-#rpcport=9377 # The default TestNet RPC port
+<h3 id="cryptoslave">Cryptoslave</h3>
 
-#testnet=0
-#testnetstart=0             # only one master per testnet! For the master it has to be testnetstart=1
+<p><em>Testnet, Project Manager</em></p>
 
-#utctimeisknown=1
+<p>Cryptoslave keeps track of development and is making sure issues reported are filled for further review. He dedicates his time to better the coin by communicating with the other members of the team and listening to the community.</p>
 
+<h3 id="frankh4x">Frankh4x</h3>
 
-############ New RetargetPID parameter control and csv file logging options in this new [ ] section
+<p><em>Infrastructure Architect</em></p>
 
-[retargetpid]
+<p>Frankh4x joined the team in October 2017.</p>
 
-# HARDCODED VALUES
+<h3 id="oyvkva">Oyvkva</h3>
 
-retargetcsv=0
+<p><em>Community manager, developer</em></p>
 
-############ Atcoin IP2 network Destination settings.
+<p>Oyvkva joined the team in October 2017.</p>
 
-[i2p.mydestination]
-static=1          # uncomment after having copied the "privatekey" parameter below
-#privatekey=       # copy here the settings-&gt;I2P Destination details-&gt; "privatekey" parameter and remove the #
+<h3 id="killertaco">Killertaco</h3>
 
-shareaddr=1       # sharing of dynamic and static I2P address is enabled by default.
+<p><em>Developer, tester</em></p>
 
-############ Atcoin IP2 Options settings.
+<p>Killertaco joined the team in April 2018.</p>
 
-[i2p.options]
-enabled=1             # always enable to use I2P
-samhost=127.0.0.1     # set to I2P-SAM local address of the I2P router, after enabling SAM in it
-samport=7656
-sessionname=Atcoin-client
-extra=
+<h3 id="jsx">JSX</h3>
 
-# Inbound parameters options
-[i2p.options.inbound]
-quantity=3
-length=3
-lengthvariance=0
-backupquantity=0
-allowzerohop=0
-iprestriction=2 
+<p><em>Community manager, project management</em></p>
 
-# Outbound parameters options
-[i2p.options.outbound]
-quantity=3
-length=3
-lengthvariance=0
-backupquantity=0
-allowzerohop=0
-iprestriction=2
-priority=0
+<p>JSX joined the team in April 2018.</p>
 
-</code></pre></div></div>
+<p><br /></p>
+
+<h2 id="community-members">Community members</h2>
+
+<h3 id="abyss">Abyss</h3>
+
+<p>Creator of <a href="https://bitcointalk.org/index.php?topic=1092682.0">ExchangeD.i2p</a>, the first anonymous cryptocurrency exchange.</p>
+
+<h3 id="alacast">Alacast</h3>
+
+<p>I’m just an enthusiast helping Atcoin on my spare time.</p>
+
+<h3 id="brotroxer">BroTroxer</h3>
+
+<p>BroTroxer has extensive knowledge of the cryptocurrency markets, he shares the same beliefs as the dev team regarding the future of cryptocurrencies.</p>
+
+<h3 id="geekz">Geekz</h3>
+
+<p>Geekz is the web designer who is in charge of Ancblockchain.com, an Atcoin block explorer.</p>
+
+<h3 id="n00n">N00n</h3>
+
+<p>N00n is the graphic designer responsible for the Atcoin brand identity.</p>
+
+<p><br />
+<em>Are we missing someone? Just email info@atcoin.net and let us know.</em></p>
 
     <p class="spacer"></p>
     </div>
@@ -376,7 +326,7 @@ priority=0
                 <div class="footer-col col-md-4">
                     <h3>Contact</h3>
                     <p>
-                         info@anoncoin.net
+                         info@atcoin.net
                         <br> 
                     </p>
                 </div>
@@ -385,7 +335,7 @@ priority=0
                     <ul class="list-inline">
                         
                         <li>
-                            <a href="https://twitter.com/anoncoinproject" class="btn-social btn-outline">
+                            <a href="https://twitter.com/atcoinproject" class="btn-social btn-outline">
                                 <i class="fa fa-fw fa-twitter"></i>
                             </a>
                         </li>
@@ -409,7 +359,7 @@ priority=0
                         </li>
                         
                         <li>
-                            <a href="https://github.com/Atcoin/anoncoin" class="btn-social btn-outline">
+                            <a href="https://github.com/Atcoin/atcoin" class="btn-social btn-outline">
                                 <i class="fa fa-fw fa-github"></i>
                             </a>
                         </li>
@@ -419,7 +369,7 @@ priority=0
                 <div class="footer-col col-md-4">
                     <h3>Chat with us</h3>
                     <p>
-                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU
+                            <a href="https://join.slack.com/t/atcoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU
                             " class="btn btn-lg btn-outline">
                                 <i class="fa fa-slack"></i> Join our Slack
                             </a>

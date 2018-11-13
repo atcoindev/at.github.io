@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Atcoin(ANC) is a unique decentralized peer to peer internet cryptocurrency that provides for its users. I2P and Tor compatible, it is resistant to crackdowns from hostile authorities.  ">
     <meta name="keywords" content="" /> 
-    <link rel="canonical" href="https://anoncoin.net/How_to_build_Atcoin_develop/">
+    <link rel="canonical" href="https://atcoin.net/How_to_build_Atcoin_develop/">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
 
     <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
@@ -158,7 +158,7 @@
                     <ul class="dropdown-menu">
                          
                         <li>
-                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU">Slack</a>
+                            <a href="https://join.slack.com/t/atcoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU">Slack</a>
                         </li>
                           
                         <li>
@@ -174,7 +174,7 @@
                         </li>
                           
                         <li>
-                            <a href="https://twitter.com/anoncoinproject">Official Twitter</a>
+                            <a href="https://twitter.com/atcoinproject">Official Twitter</a>
                         </li>
                           
                         <li>
@@ -204,7 +204,7 @@
 
     
 
-    <p>These guides are for installing the latest development builds (9.6.9) from <a href="https://github.com/Atcoin/anoncoin">Github</a>. The new develop version is <em>0.9.6.9-6e80477</em>, branch gr_develop, commit 6e80477 (https://github.com/Atcoin/anoncoin/commit/6e80477aee8843b8e32755d04416a1283596a76e). This version is based on Bitcoin 0.10.99 code. The old 9.4.4 develop version was <em>0.9.4.4-53469ee</em>, branch develop. To install Git through I2P please check <a href="http://git.repo.i2p/h/guide/setting_up_tunnels.html">the Git I2P guide</a>.</p>
+    <p>These guides are for installing the latest development builds (9.6.9) from <a href="https://github.com/Atcoin/atcoin">Github</a>. The new develop version is <em>0.9.6.9-6e80477</em>, branch gr_develop, commit 6e80477 (https://github.com/Atcoin/atcoin/commit/6e80477aee8843b8e32755d04416a1283596a76e). This version is based on Bitcoin 0.10.99 code. The old 9.4.4 develop version was <em>0.9.4.4-53469ee</em>, branch develop. To install Git through I2P please check <a href="http://git.repo.i2p/h/guide/setting_up_tunnels.html">the Git I2P guide</a>.</p>
 
 <h2 id="ubuntu-64-bit-or-debian-8">Ubuntu 64 bit or Debian 8</h2>
 
@@ -221,8 +221,8 @@ sudo apt-get install g++ git automake
 </code></pre></div></div>
 <p>Then continue with those commands:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd
-git clone https://github.com/Atcoin/anoncoin.git
-cd anoncoin
+git clone https://github.com/Atcoin/atcoin.git
+cd atcoin
 git checkout 6e80477
 ./autogen.sh
 cd depends
@@ -237,7 +237,7 @@ make
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ..
 ./configure --prefix=`pwd`/depends/ &lt;your triplet name&gt;
 </code></pre></div></div>
-<p>Finally launch the build while still in the /anoncoin/ directory:</p>
+<p>Finally launch the build while still in the /atcoin/ directory:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make
 </code></pre></div></div>
 <p>Now you can recover the compiled binaries (below).</p>
@@ -255,32 +255,32 @@ make
 <p><strong>Recovering the compiled binaries:</strong></p>
 
 <p>Three programs were created:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anoncoin/src/anoncoind
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>atcoin/src/atcoind
 
-anoncoin/src/anoncoin-cli
+atcoin/src/atcoin-cli
 
-anoncoin/src/qt/anoncoin-qtc
+atcoin/src/qt/atcoin-qtc
 </code></pre></div></div>
 <p>If you would like to save the resulting executables, you can do the following:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make install
 </code></pre></div></div>
-<p>This will store your 3 binaries in your <prefix>/bin directory, for example: /home/cs8m/anoncoin/depends/x86_64-unknown-linux-gnu/bin</prefix></p>
+<p>This will store your 3 binaries in your <prefix>/bin directory, for example: /home/cs8m/atcoin/depends/x86_64-unknown-linux-gnu/bin</prefix></p>
 
-<p>To allow anoncoin-qt to be executable from any directory, you can copy it to usr/local/bin:</p>
+<p>To allow atcoin-qt to be executable from any directory, you can copy it to usr/local/bin:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd src/qt
-sudo cp anoncoin-qtc /usr/local/bin
+sudo cp atcoin-qtc /usr/local/bin
 </code></pre></div></div>
 <p>Now you can install the i2pd router in the same system as explained in <a href="/How_to_setup_Atcoin_to_use_i2pd_in_a_VM_on_a_Windows_machine/">How to setup Atcoin to use i2pd in a VM on a Windows machine</a></p>
 
-<p>Then you can continue by configuring the /home/username/.anoncoin/anoncoin.conf following the guide at <a href="/How_to_run_Atcoin/">How to run Atcoin</a></p>
+<p>Then you can continue by configuring the /home/username/.atcoin/atcoin.conf following the guide at <a href="/How_to_run_Atcoin/">How to run Atcoin</a></p>
 
-<p>On first execution, if the directory /home/username/.anoncoin/ contained a blockchain from a previously installed version, execute</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anoncoin-qtc -reindex
+<p>On first execution, if the directory /home/username/.atcoin/ contained a blockchain from a previously installed version, execute</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>atcoin-qtc -reindex
 </code></pre></div></div>
 <p>Ubuntu 32 bit
 ————-</p>
 
-<p>Do the same as for 64 bit (see above). <strong>But In case of sse2 related errors after typing the second make command in anoncoin directory</strong>, run this command:</p>
+<p>Do the same as for 64 bit (see above). <strong>But In case of sse2 related errors after typing the second make command in atcoin directory</strong>, run this command:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export CFLAGS=“-msse2” ; export CPPFLAGS=“-msse2” ; export CXXFLAGS=“-msse2”
 </code></pre></div></div>
 <p>and then</p>
@@ -297,7 +297,7 @@ make
 <p>(Additional material, on how to build Atcoin for another HOST)</p>
 
 <p>After having saved the previously generated 3 binaries in your <prefix>/bin directory, the working directory tree can be cleaned of all your files used to create that configuration (see above)...</prefix></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/anoncoin
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ~/atcoin
 make distclean
 </code></pre></div></div>
 <p>In the following example, we will be using Windows 64 bit as the target host.</p>
@@ -318,15 +318,15 @@ make install
 </code></pre></div></div>
 <p>This will store your 3 binaries in your <prefix>/bin directory, in this case:</prefix></p>
 
-<p>/home/cs8m/anoncoin/depends/x86_64-w64-mingw32/bin</p>
+<p>/home/cs8m/atcoin/depends/x86_64-w64-mingw32/bin</p>
 
-<p>Note: After that final install step, an anoncoin setup.exe can be built for windows too as follow. From the ~/anoncoin/ directory:</p>
+<p>Note: After that final install step, an atcoin setup.exe can be built for windows too as follow. From the ~/atcoin/ directory:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir release/ 
 cp depends/x86_64-w64-mingw32/bin/*.exe release/
 cd share/
 makensis setup.nsi
 </code></pre></div></div>
-<p>The anoncoin-0.9.6.9-win64-setup.exe and the executables will be found in anoncoin/release and can be copied to your windows 64 bit machine.</p>
+<p>The atcoin-0.9.6.9-win64-setup.exe and the executables will be found in atcoin/release and can be copied to your windows 64 bit machine.</p>
 
 <p>To create a shared folder with the host computer on VirtualBox 4.3.20 (change number if another version is used), install the add-on:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget http://download.virtualbox.org/virtualbox/4.3.20/VBoxGuestAdditions_4.3.20.iso
@@ -345,9 +345,9 @@ sudo ./VBoxLinuxAdditions.run 
 
 <h2 id="os-x">OS X</h2>
 
-<p>Download the Atcoin code and then change to the anoncoin directory using the commands</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/Atcoin/anoncoin.git
-cd anoncoin
+<p>Download the Atcoin code and then change to the atcoin directory using the commands</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/Atcoin/atcoin.git
+cd atcoin
 git checkout develop
 </code></pre></div></div>
 <p>Next generate the make files using</p>
@@ -360,20 +360,20 @@ git checkout develop
 <p>This last command should output a triplet that looks something like this: x86_64-apple-darwin13.4.0. Enter (changing the triplet if necessary)</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make HOST=x86_64-apple-darwin14.3.0
 </code></pre></div></div>
-<p>The dependencies should download and build. If there are no errors, continue to building the anoncoin binaries:</p>
+<p>The dependencies should download and build. If there are no errors, continue to building the atcoin binaries:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd ..
 ./configure --prefix=pwd/depends/x86_64-apple-darwin14.3.0 
 make HOST=x86_64-apple-darwin14.3.0
 make check
 make install
 </code></pre></div></div>
-<p>The binaries anoncoind, anoncoin-cli, and anoncoin-qt should be located in the directories src and src/qt. To make an OSX application file, use</p>
+<p>The binaries atcoind, atcoin-cli, and atcoin-qt should be located in the directories src and src/qt. To make an OSX application file, use</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make deploy
 </code></pre></div></div>
-<p>This will create Atcoin.app and Atcoin.dmg in the the root anoncoin directory.</p>
+<p>This will create Atcoin.app and Atcoin.dmg in the the root atcoin directory.</p>
 
 <p>On first execution, if the directory ~Library/Application\ Support/Atcoin contained a blockchain from a previously installed version, execute</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>anoncoin-qt -reindex
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>atcoin-qt -reindex
 </code></pre></div></div>
 <p>See also
 ——–</p>
@@ -385,14 +385,14 @@ make install
 make
 </code></pre></div>    </div>
   </li>
-  <li><a href="http://anoncoin.github.io/anoncoin/">Atcoin Doxygen project</a></li>
+  <li><a href="http://atcoin.github.io/atcoin/">Atcoin Doxygen project</a></li>
 </ul>
 
 <h2 id="what-to-do-next">What to do next?</h2>
 
 <p>Place the bootstrap.dat file in the appropriate Atcoin data directory: <a href="/How_to_use_a_bootstrap_file_to_speed_up_initial_synchronization/">How_to_use_a_bootstrap_file_to_speed_up_initial_synchronization</a></p>
 
-<p>Create the anoncoin.conf file in the appropriate Atcoin data directory.</p>
+<p>Create the atcoin.conf file in the appropriate Atcoin data directory.</p>
 
     <p class="spacer"></p>
     </div>
@@ -407,7 +407,7 @@ make
                 <div class="footer-col col-md-4">
                     <h3>Contact</h3>
                     <p>
-                         info@anoncoin.net
+                         info@atcoin.net
                         <br> 
                     </p>
                 </div>
@@ -416,7 +416,7 @@ make
                     <ul class="list-inline">
                         
                         <li>
-                            <a href="https://twitter.com/anoncoinproject" class="btn-social btn-outline">
+                            <a href="https://twitter.com/atcoinproject" class="btn-social btn-outline">
                                 <i class="fa fa-fw fa-twitter"></i>
                             </a>
                         </li>
@@ -440,7 +440,7 @@ make
                         </li>
                         
                         <li>
-                            <a href="https://github.com/Atcoin/anoncoin" class="btn-social btn-outline">
+                            <a href="https://github.com/Atcoin/atcoin" class="btn-social btn-outline">
                                 <i class="fa fa-fw fa-github"></i>
                             </a>
                         </li>
@@ -450,7 +450,7 @@ make
                 <div class="footer-col col-md-4">
                     <h3>Chat with us</h3>
                     <p>
-                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU
+                            <a href="https://join.slack.com/t/atcoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU
                             " class="btn btn-lg btn-outline">
                                 <i class="fa fa-slack"></i> Join our Slack
                             </a>

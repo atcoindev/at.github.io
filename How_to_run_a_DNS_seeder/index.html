@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Atcoin(ANC) is a unique decentralized peer to peer internet cryptocurrency that provides for its users. I2P and Tor compatible, it is resistant to crackdowns from hostile authorities.  ">
     <meta name="keywords" content="" /> 
-    <link rel="canonical" href="https://anoncoin.net/How_to_run_a_DNS_seeder/">
+    <link rel="canonical" href="https://atcoin.net/How_to_run_a_DNS_seeder/">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
 
     <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
@@ -158,7 +158,7 @@
                     <ul class="dropdown-menu">
                          
                         <li>
-                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU">Slack</a>
+                            <a href="https://join.slack.com/t/atcoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU">Slack</a>
                         </li>
                           
                         <li>
@@ -174,7 +174,7 @@
                         </li>
                           
                         <li>
-                            <a href="https://twitter.com/anoncoinproject">Official Twitter</a>
+                            <a href="https://twitter.com/atcoinproject">Official Twitter</a>
                         </li>
                           
                         <li>
@@ -234,7 +234,7 @@ make -j'nproc'
 
 <h3 id="configuration">Configuration</h3>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir -p ${HOME}/.dnsseed-anoncoin
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mkdir -p ${HOME}/.dnsseed-atcoin
 </code></pre></div></div>
 
 <ul>
@@ -244,16 +244,16 @@ make -j'nproc'
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
 <span class="nv">SEED</span><span class="o">=</span>127.0.0.1
-<span class="nv">HOST</span><span class="o">=</span>anc.dnsseed01.anoncoin.darkgamex.ch
-<span class="nv">NAMESERVER</span><span class="o">=</span>dnsseed01.anoncoin.darkgamex.ch
+<span class="nv">HOST</span><span class="o">=</span>anc.dnsseed01.atcoin.darkgamex.ch
+<span class="nv">NAMESERVER</span><span class="o">=</span>dnsseed01.atcoin.darkgamex.ch
 <span class="nv">P2PORT</span><span class="o">=</span>9377
 <span class="nv">MAGIC</span><span class="o">=</span>FACABADA
 <span class="nv">SOA</span><span class="o">=</span>K1773R.darkgamex.ch
 <span class="nv">TOR</span><span class="o">=</span>127.0.0.1:9050
 <span class="nv">CRAWLER_THREADS</span><span class="o">=</span>250
 <span class="nv">DNSSERVER_THREADS</span><span class="o">=</span>50
- cd <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/.dnsseed-anoncoin
-screen -S dnsseed-anoncoin ~/git/bitcoin-seeder/dnsseed -h <span class="k">${</span><span class="nv">HOST</span><span class="k">}</span> -n <span class="k">${</span><span class="nv">NAMESERVER</span><span class="k">}</span> <span class="se">\</span>
+ cd <span class="k">${</span><span class="nv">HOME</span><span class="k">}</span>/.dnsseed-atcoin
+screen -S dnsseed-atcoin ~/git/bitcoin-seeder/dnsseed -h <span class="k">${</span><span class="nv">HOST</span><span class="k">}</span> -n <span class="k">${</span><span class="nv">NAMESERVER</span><span class="k">}</span> <span class="se">\</span>
 <span class="nt">--p2port</span> <span class="k">${</span><span class="nv">P2PORT</span><span class="k">}</span> --magic <span class="k">${</span><span class="nv">MAGIC</span><span class="k">}</span> --seed <span class="k">${</span><span class="nv">SEED</span><span class="k">}</span> -m <span class="k">${</span><span class="nv">SOA</span><span class="k">}</span> -o <span class="k">${</span><span class="nv">TOR</span><span class="k">}</span> <span class="se">\</span>
 <span class="nt">-t</span> <span class="k">${</span><span class="nv">CRAWLER_THREADS</span><span class="k">}</span> -d <span class="k">${</span><span class="nv">DNSSERVER_THREADS</span><span class="k">}</span>
 </code></pre></div></div>
@@ -295,7 +295,7 @@ DNSSERVER_THREADS=&lt;Amount of DNSserver threads&gt;
                 <div class="footer-col col-md-4">
                     <h3>Contact</h3>
                     <p>
-                         info@anoncoin.net
+                         info@atcoin.net
                         <br> 
                     </p>
                 </div>
@@ -304,7 +304,7 @@ DNSSERVER_THREADS=&lt;Amount of DNSserver threads&gt;
                     <ul class="list-inline">
                         
                         <li>
-                            <a href="https://twitter.com/anoncoinproject" class="btn-social btn-outline">
+                            <a href="https://twitter.com/atcoinproject" class="btn-social btn-outline">
                                 <i class="fa fa-fw fa-twitter"></i>
                             </a>
                         </li>
@@ -328,7 +328,7 @@ DNSSERVER_THREADS=&lt;Amount of DNSserver threads&gt;
                         </li>
                         
                         <li>
-                            <a href="https://github.com/Atcoin/anoncoin" class="btn-social btn-outline">
+                            <a href="https://github.com/Atcoin/atcoin" class="btn-social btn-outline">
                                 <i class="fa fa-fw fa-github"></i>
                             </a>
                         </li>
@@ -338,7 +338,7 @@ DNSSERVER_THREADS=&lt;Amount of DNSserver threads&gt;
                 <div class="footer-col col-md-4">
                     <h3>Chat with us</h3>
                     <p>
-                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU
+                            <a href="https://join.slack.com/t/atcoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU
                             " class="btn btn-lg btn-outline">
                                 <i class="fa fa-slack"></i> Join our Slack
                             </a>

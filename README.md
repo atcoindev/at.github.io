@@ -13,7 +13,7 @@ This is a work in progress. Website content is markdown served with Jekyll. Jeky
 
 ## How to contribute.
 
-We are looking for help with articles, design, transation, etc. Join us in #design [on Slack.](https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU)
+We are looking for help with articles, design, transation, etc. Join us in #design [on Slack.](https://join.slack.com/t/atcoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU)
 
 This is the basic process on how to contribute to the Anoncoin website.
 
@@ -106,4 +106,4 @@ Once you've committed and pushed all of your changes to GitHub, go to the page f
 
 ## Questions?
 
-Join us in #design [on Slack and ask.](https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU)
+Join us in #design [on Slack and ask.](https://join.slack.com/t/atcoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU)

@@ -3,11 +3,11 @@
     <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Atcoin in the news</title>
+    <title>Atcoin I2P configuration.</title>
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Atcoin(ANC) is a unique decentralized peer to peer internet cryptocurrency that provides for its users. I2P and Tor compatible, it is resistant to crackdowns from hostile authorities.  ">
     <meta name="keywords" content="" /> 
-    <link rel="canonical" href="https://anoncoin.net/Atcoin_in_the_news/">
+    <link rel="canonical" href="https://atcoin.net/Atcoin_I2P_conf/">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
 
     <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
@@ -158,7 +158,7 @@
                     <ul class="dropdown-menu">
                          
                         <li>
-                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU">Slack</a>
+                            <a href="https://join.slack.com/t/atcoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU">Slack</a>
                         </li>
                           
                         <li>
@@ -174,7 +174,7 @@
                         </li>
                           
                         <li>
-                            <a href="https://twitter.com/anoncoinproject">Official Twitter</a>
+                            <a href="https://twitter.com/atcoinproject">Official Twitter</a>
                         </li>
                           
                         <li>
@@ -195,7 +195,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-12 text-center">
-            <h1>Atcoin in the news</h1>
+            <h1>Atcoin I2P configuration.</h1>
         </div>
     </div>
     <div class="row">
@@ -203,65 +203,165 @@
             <p>
 
     
-    <p class="post-date"><i>Updated: Oct 26, 2017</i></p>
+    <p class="post-date"><i>Updated: Oct 28, 2017</i></p>
     
 
-    <h2 id="2017">2017</h2>
+    <p>Name this file atcoin.conf and saved it in:</p>
 
-<ul>
-  <li><a href="https://www.scmagazineuk.com/fake-bank-transfer-emails-found-to-be-stealing-bitcoins-and-passwords/article/634838/"><strong>Fake bank transfer emails found to be stealing bitcoins and passwords</strong></a>
-SC Magazine - January 31, 2017</li>
-  <li><a href="https://www.cryptocoinsnews.com/malware-discovered-sending-fake-emails-to-steal-bitcoin-and-passwords/"><strong>Malware Discovered Sending Fake Emails</strong></a>
-Cryptocoin News - January 28, 2017</li>
-</ul>
+<h4 id="windows">Windows:</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%appdata%/atcoin   
+</code></pre></div></div>
+<h4 id="linuxmacos">Linux/MacOS:</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~/.atcoin
+</code></pre></div></div>
 
-<h2 id="2016">2016</h2>
+<h4 id="atcoinconf">atcoin.conf</h4>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+daemon=1
+server=1
+rpcuser=************USER***************                     #Change it! (no need to remember)
+rpcpassword=**************SECRETPASS*********               #Change it! (no need to remember)  
+paytxfee=0.0001
 
-<ul>
-  <li><a href="https://lifeboat.com/ex/university.outreach"><strong>Lifeboat foundation accepts Atcoin</strong></a>
-Lifeboat Foundation - Nov 20, 2016</li>
-  <li><a href="https://www.cryptocoinsnews.com/eu-ip-office-bitcoin-tor-used-pirates-hide-criminal-proceeds/"><strong>EU IP Office: Pirates Are Accepting Bitcoin</strong></a>
-Cryptocoin News - July 18, 2016</li>
-</ul>
+#rpcallowip=192.168.0.0/24
+#rpcallowip=192.168.2.0/255.255.255.0
+#rpcbind=192.168.2.55
+#rpcconnect=192.168.2.55
+#rpcwait=1
+ 
+#rest=1 
 
-<h2 id="2015">2015</h2>
+#rpcssl=1
+#rpcsslcertificatechainfile
+#rpcsslprivatekeyfile
+#rpcsslciphers
+#rpcport=443
 
-<ul>
-  <li><a href="http://www.newsbtc.com/2015/01/19/silk-road-reloaded-add-new-altcoins-payment-options/"><strong>Silk Road Reloaded to Add New Altcoins as Payment Option</strong></a>
-News BTC -  January 19, 2015</li>
-</ul>
+############ Running a version of ONLYNET:       #If everything is commented out, then we are in mixed mode (clearnet and I2P if [i2p.options] enabled=1)
 
-<h2 id="2014">2014</h2>
+onlynet=i2p       # I2P-only enabled!
+#onlynet=ipv4     # IPV4 disabled!
+#onlynet=ipv6
+#onlynet=tor
+#onlynet=onion 
 
-<ul>
-  <li><a href="http://www.deepdotweb.com/tag/ArmsRace/"><strong>Anonymous Crypto-currency Arms Race (Parts 1, 2, and 3)</strong></a>
-DeepDotWeb - October 22-25-29, 2014</li>
-  <li><a href="http://www.deepdotweb.com/2014/09/18/can-anoncoin-be-the-currency-of-the-deep-web/"><strong>Can Atcoin Be The Currency Of The Deep Web?</strong></a>
-DeepDotWeb - September 18, 2014</li>
-  <li><a href="http://coinbrief.net/anonymous-cryptocurrencies-brief-history/"><strong>Anonymous cryptocurrencies: their history in brief</strong></a>
-CoinBrief - July 28, 2014</li>
-  <li><a href="http://www.amazon.com/Anonymous-Cryptocurrencies-bitcoin-alternatives-anonymity-ebook/dp/B00KZ6WANE"><strong>Anonymous Cryptocurrencies: The rise of bitcoin alternatives that offer true anonymity</strong></a>
-Amazon - June 13, 2014</li>
-  <li><a href="http://www.wired.com/2014/05/bitcoin-anonymous-projects/"><strong>5 Bitcoin Projects That Could Make Payments Far More Anonymous</strong></a>
-Wired - May 5, 2014</li>
-</ul>
 
-<h2 id="2013">2013</h2>
+############ MISC Settings
 
-<ul>
-  <li><a href="http://dealbook.nytimes.com/2013/11/24/in-bitcoins-orbit-rival-virtual-currencies-vie-for-acceptance/?_php=true&amp;_type=blogs&amp;_php=true&amp;_type=blogs&amp;_r=1"><strong>In Bitcoin’s Orbit: Rival Virtual Currencies Vie for Acceptance</strong></a>
-New York Times (dealbook) - Nov. 24, 2013</li>
-  <li><a href="http://spectrum.ieee.org/computing/networks/whos-who-in-bitcoin-zerocoin-hero-matthew-green"><strong>Who’s Who in Bitcoin: Zerocoin Hero Matthew Green</strong></a>
-IEEE Spectrum - Oct. 24, 2013</li>
-  <li><a href="http://www.coindesk.com/how-anonymous-is-bitcoin/"><strong>How anonymous is bitcoin?</strong></a>
-CoinDesk - June 7, 2013</li>
-  <li><a href="http://www.forbes.com/sites/andygreenberg/2013/04/12/zerocoin-add-on-for-bitcoin-could-make-it-truly-anonymous-and-untraceable/"><strong>‘Zerocoin’ Add-on For Bitcoin Could Make It Truly Anonymous And Untraceable</strong></a>
-Forbes - April 12, 2013</li>
-  <li><a href="http://blog.cryptographyengineering.com/2013/04/zerocoin-making-bitcoin-anonymous.html"><strong>Zerocoin: making Bitcoin anonymous</strong></a>
-Cryptography Engineering (blog)- April 11, 2013</li>
-  <li><a href="http://www.newscientist.com/blogs/onepercent/2013/03/bitcoin-zerocoin.html"><strong>Bitcoin add-on makes your virtual purchases private</strong></a>
-NewScientist - March 13, 2013</li>
-</ul>
+#stopafterblockimport=1      # useful when using bootstrap.dat, to shutdown the qt-client when file-synching is done
+#loadblock=/home/groundrod/.atcoin/blocks-src/blk00000.dat #to use raw blk#####.dat instead of bootstrap.dat 
+
+#bind=192.168.0.11   # set this node local-network address if you do a multi-nodes local network or for port-forwarding, else comment it!
+#whitelist=192.168.0.11      #c hange this to another local node local-network address to allow it to connect!
+#whitebind=192.168.2.55
+
+#checkblocks=50000
+
+#externalip=???
+#connect=192.168.0.101    # only connect to this node 
+
+#listen=1 # NOTE: Listen only refers to clearnet IPs, I2P always listens, if enabled.
+#discover=0    # Try to discover our own IP address
+#upnp=1    # enable upnp to open port for inbound connection on clearnet
+
+#dns=0
+#dnsseed=1
+#forcednsseed=1
+
+#stfu=1    # Tired of the 'running on clearnet warning' during startup?  Try this... 
+
+#txindex=0    #enable it to use multisig transactions
+dbcache=400   #larger peer address space supported by Atcoin for I2P
+
+############ Debugging Options
+
+#checkblockindex=1
+#checkmempool=1
+#logips=1
+#logtimestamps=0
+
+#debug=    # enable ALL debug category except bench and estimatefee
+
+#debug=addrman    # category specific debug log
+#debug=alert
+#debug=coindb
+#debug=db
+#debug=lock
+#debug=gui
+#debug=mempool
+#debug=net
+#debug=rand
+#debug=retarget
+#debug=rpc
+#debug=rpcio
+#debug=selectcoins
+#debug=timedata
+#debug=version
+
+#debug=bench
+#debug=estimatefee
+
+############ Mining Options, enable TestNet and start a new one with initial conditions valid.
+
+#keypool=100
+
+#gen=0
+#genproclimit=1
+
+rpcport=9376  # The default MainNet RPC port
+#rpcport=9377 # The default TestNet RPC port
+
+#testnet=0
+#testnetstart=0             # only one master per testnet! For the master it has to be testnetstart=1
+
+#utctimeisknown=1
+
+
+############ New RetargetPID parameter control and csv file logging options in this new [ ] section
+
+[retargetpid]
+
+# HARDCODED VALUES
+
+retargetcsv=0
+
+############ Atcoin IP2 network Destination settings.
+
+[i2p.mydestination]
+static=1          # uncomment after having copied the "privatekey" parameter below
+#privatekey=       # copy here the settings-&gt;I2P Destination details-&gt; "privatekey" parameter and remove the #
+
+shareaddr=1       # sharing of dynamic and static I2P address is enabled by default.
+
+############ Atcoin IP2 Options settings.
+
+[i2p.options]
+enabled=1             # always enable to use I2P
+samhost=127.0.0.1     # set to I2P-SAM local address of the I2P router, after enabling SAM in it
+samport=7656
+sessionname=Atcoin-client
+extra=
+
+# Inbound parameters options
+[i2p.options.inbound]
+quantity=3
+length=3
+lengthvariance=0
+backupquantity=0
+allowzerohop=0
+iprestriction=2 
+
+# Outbound parameters options
+[i2p.options.outbound]
+quantity=3
+length=3
+lengthvariance=0
+backupquantity=0
+allowzerohop=0
+iprestriction=2
+priority=0
+
+</code></pre></div></div>
 
     <p class="spacer"></p>
     </div>
@@ -276,7 +376,7 @@ NewScientist - March 13, 2013</li>
                 <div class="footer-col col-md-4">
                     <h3>Contact</h3>
                     <p>
-                         info@anoncoin.net
+                         info@atcoin.net
                         <br> 
                     </p>
                 </div>
@@ -285,7 +385,7 @@ NewScientist - March 13, 2013</li>
                     <ul class="list-inline">
                         
                         <li>
-                            <a href="https://twitter.com/anoncoinproject" class="btn-social btn-outline">
+                            <a href="https://twitter.com/atcoinproject" class="btn-social btn-outline">
                                 <i class="fa fa-fw fa-twitter"></i>
                             </a>
                         </li>
@@ -309,7 +409,7 @@ NewScientist - March 13, 2013</li>
                         </li>
                         
                         <li>
-                            <a href="https://github.com/Atcoin/anoncoin" class="btn-social btn-outline">
+                            <a href="https://github.com/Atcoin/atcoin" class="btn-social btn-outline">
                                 <i class="fa fa-fw fa-github"></i>
                             </a>
                         </li>
@@ -319,7 +419,7 @@ NewScientist - March 13, 2013</li>
                 <div class="footer-col col-md-4">
                     <h3>Chat with us</h3>
                     <p>
-                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU
+                            <a href="https://join.slack.com/t/atcoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU
                             " class="btn btn-lg btn-outline">
                                 <i class="fa fa-slack"></i> Join our Slack
                             </a>

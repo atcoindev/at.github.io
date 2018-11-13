@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Atcoin(ANC) is a unique decentralized peer to peer internet cryptocurrency that provides for its users. I2P and Tor compatible, it is resistant to crackdowns from hostile authorities.  ">
     <meta name="keywords" content="" /> 
-    <link rel="canonical" href="https://anoncoin.net/Creating_themes/">
+    <link rel="canonical" href="https://atcoin.net/Creating_themes/">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
 
     <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
@@ -158,7 +158,7 @@
                     <ul class="dropdown-menu">
                          
                         <li>
-                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU">Slack</a>
+                            <a href="https://join.slack.com/t/atcoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU">Slack</a>
                         </li>
                           
                         <li>
@@ -174,7 +174,7 @@
                         </li>
                           
                         <li>
-                            <a href="https://twitter.com/anoncoinproject">Official Twitter</a>
+                            <a href="https://twitter.com/atcoinproject">Official Twitter</a>
                         </li>
                           
                         <li>
@@ -206,13 +206,13 @@
 
     <p>The GUI version of Atcoin uses the industry-standard Qt toolkit for graphic elements. This allows us to format the screen layout once and have it appear similar on Windows, Mac, Linux, etc. It works a lot like Cascading Style Sheets (CSS). You can change the color and sometimes the shape of various graphic items like labels, combo boxes, and text. Only hardcoded styles set by the program cannot be changed - for example the red “(out of sync)” message.</p>
 
-<p>Each style is in its own directory along with any graphics it uses. The themes sub-directory is under the configuration directory, which is where anoncoin.conf is stored and the stylesheet is always named “styles.qss”. As an example, the stylesheet for the “I2Pdarkish” theme is under <em>{configdir}/themes/I2Pdarkish/styles.qss</em>. The directory name is what will appear in the drop-down box under “Options-&gt;Display-&gt;Theme”.</p>
+<p>Each style is in its own directory along with any graphics it uses. The themes sub-directory is under the configuration directory, which is where atcoin.conf is stored and the stylesheet is always named “styles.qss”. As an example, the stylesheet for the “I2Pdarkish” theme is under <em>{configdir}/themes/I2Pdarkish/styles.qss</em>. The directory name is what will appear in the drop-down box under “Options-&gt;Display-&gt;Theme”.</p>
 
 <h2 id="layout">Layout</h2>
 
 <p>The layout of each screen is defined in the *.ui files of the source code, which can be found in src/qt/forms. Each is slightly different but all contain common Qt layout items. It is handy to look at these files when designing complicated styles that affect specific named elements. The layout is much like CSS’s box model. For example, here is a diagram of how the Overview screen was laid out in a recent version.</p>
 
-<p><img src="/img/anoncoin_layout.png" alt="Layout" /></p>
+<p><img src="/img/atcoin_layout.png" alt="Layout" /></p>
 
 <p>As an example, we can tell it the style sheet that we want all QLabels to be black except for the Immature balance which we want to be grey. This would be done by defining first the normal color for QLabels, and then the specific color for labelImmature:</p>
 
@@ -280,7 +280,7 @@ QComboBox
                 <div class="footer-col col-md-4">
                     <h3>Contact</h3>
                     <p>
-                         info@anoncoin.net
+                         info@atcoin.net
                         <br> 
                     </p>
                 </div>
@@ -289,7 +289,7 @@ QComboBox
                     <ul class="list-inline">
                         
                         <li>
-                            <a href="https://twitter.com/anoncoinproject" class="btn-social btn-outline">
+                            <a href="https://twitter.com/atcoinproject" class="btn-social btn-outline">
                                 <i class="fa fa-fw fa-twitter"></i>
                             </a>
                         </li>
@@ -313,7 +313,7 @@ QComboBox
                         </li>
                         
                         <li>
-                            <a href="https://github.com/Atcoin/anoncoin" class="btn-social btn-outline">
+                            <a href="https://github.com/Atcoin/atcoin" class="btn-social btn-outline">
                                 <i class="fa fa-fw fa-github"></i>
                             </a>
                         </li>
@@ -323,7 +323,7 @@ QComboBox
                 <div class="footer-col col-md-4">
                     <h3>Chat with us</h3>
                     <p>
-                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU
+                            <a href="https://join.slack.com/t/atcoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU
                             " class="btn btn-lg btn-outline">
                                 <i class="fa fa-slack"></i> Join our Slack
                             </a>

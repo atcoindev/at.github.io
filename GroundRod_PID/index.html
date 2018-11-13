@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="description" content="Atcoin(ANC) is a unique decentralized peer to peer internet cryptocurrency that provides for its users. I2P and Tor compatible, it is resistant to crackdowns from hostile authorities.  ">
     <meta name="keywords" content="" /> 
-    <link rel="canonical" href="https://anoncoin.net/GroundRod_PID/">
+    <link rel="canonical" href="https://atcoin.net/GroundRod_PID/">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
 
     <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
@@ -158,7 +158,7 @@
                     <ul class="dropdown-menu">
                          
                         <li>
-                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU">Slack</a>
+                            <a href="https://join.slack.com/t/atcoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU">Slack</a>
                         </li>
                           
                         <li>
@@ -174,7 +174,7 @@
                         </li>
                           
                         <li>
-                            <a href="https://twitter.com/anoncoinproject">Official Twitter</a>
+                            <a href="https://twitter.com/atcoinproject">Official Twitter</a>
                         </li>
                           
                         <li>
@@ -214,7 +214,7 @@
 
 <p>Here we show the results on testnet of using the GroundRod PID Retarget Difficulty Algo featured in the 0.9.6.11 version of Atcoin.</p>
 
-<p><a href="https://github.com/Atcoin/anoncoin/blob/master/src/pow.cpp">https://github.com/Atcoin/anoncoin/blob/master/src/pow.cpp</a></p>
+<p><a href="https://github.com/Atcoin/atcoin/blob/master/src/pow.cpp">https://github.com/Atcoin/atcoin/blob/master/src/pow.cpp</a></p>
 
 <p>The PID settings used in this simulation are the one used for the 9.6.11 version ready for hardfork-block 555555.</p>
 
@@ -269,7 +269,7 @@
 
 <p>The derivative Term is defined by <code class="highlighter-rouge">dDerivativeTerm = dDerivativeGain * dRateOfChange</code></p>
 
-<p>in this particular PID setting, the Derivative term is set to <code class="highlighter-rouge">PID_DERIVATIVEGAIN </code>“<code class="highlighter-rouge">0</code>” so in fact anoncoin use a PI controller.</p>
+<p>in this particular PID setting, the Derivative term is set to <code class="highlighter-rouge">PID_DERIVATIVEGAIN </code>“<code class="highlighter-rouge">0</code>” so in fact atcoin use a PI controller.</p>
 
 <p>The PID integral term is calculated on the deviation from the <code class="highlighter-rouge">nTargetSpacing = 180</code>, the difference is multiplied by the integrator gain.</p>
 
@@ -322,10 +322,10 @@
 
 <p>In the following period an attack of x12 times the hashrate was done. The limit average UP in red was quickly touched during the increase in hahsrate, limiting the difficulty the proportional gain of the PID was requesting. After the block slowed down the difficulty reached a plateau and the average UP was no more touched. On stopping the attack, the slow blocks diminished the difficulty which was first allowed to diminish twice to 0.588 (100/170, <code class="highlighter-rouge">NMAXDIFFDECREASE </code>“<code class="highlighter-rouge">170</code>”), then was allowed to even go lower than the limit average DOWN for a quicker difficulty decrease. Around block 750 the quick block made the difficulty go up toward the limit average DOWN. Blocks 3150-4200 are shown. <img src="/img/Difflim3150-4200.png" alt="Img" /></p>
 
-<p>In this last period an attack of x12 times the hashrate was done. The attack was very powerful because there was a stream of lucky block that shoot the difficulty higher than needed, even with the limit average UP reached for several blocks. This show the necessity of the average because if there was none the difficulty would have shoot up even more up. For coins that are not as attacked by multipool as anoncoin the current settings of <code class="highlighter-rouge">PID_PROPORTIONALGAIN </code>“<code class="highlighter-rouge">1.7</code>” can be lowered or <code class="highlighter-rouge">NMAXDIFFINCREASE </code>“<code class="highlighter-rouge">200</code>” (the limit average UP) can be lowered or <code class="highlighter-rouge">WEIGHTEDAVGTIPBLOCKS_UP 4</code> (the number of blocks averaged for calculating the limit average UP) can be increased. By changing one of those three value (especially the limit average settings) something less responsive can be obtained to avoid overdrive of difficuly in case of such attack coiciding with lucky blocks.
+<p>In this last period an attack of x12 times the hashrate was done. The attack was very powerful because there was a stream of lucky block that shoot the difficulty higher than needed, even with the limit average UP reached for several blocks. This show the necessity of the average because if there was none the difficulty would have shoot up even more up. For coins that are not as attacked by multipool as atcoin the current settings of <code class="highlighter-rouge">PID_PROPORTIONALGAIN </code>“<code class="highlighter-rouge">1.7</code>” can be lowered or <code class="highlighter-rouge">NMAXDIFFINCREASE </code>“<code class="highlighter-rouge">200</code>” (the limit average UP) can be lowered or <code class="highlighter-rouge">WEIGHTEDAVGTIPBLOCKS_UP 4</code> (the number of blocks averaged for calculating the limit average UP) can be increased. By changing one of those three value (especially the limit average settings) something less responsive can be obtained to avoid overdrive of difficuly in case of such attack coiciding with lucky blocks.
 <img src="/img/Difflim4200-5250.png" alt="Img" /></p>
 
-<p>If you have any question on the PID tuning feel free to mail cryptoslave@anoncoin.net</p>
+<p>If you have any question on the PID tuning feel free to mail cryptoslave@atcoin.net</p>
 
     <p class="spacer"></p>
     </div>
@@ -340,7 +340,7 @@
                 <div class="footer-col col-md-4">
                     <h3>Contact</h3>
                     <p>
-                         info@anoncoin.net
+                         info@atcoin.net
                         <br> 
                     </p>
                 </div>
@@ -349,7 +349,7 @@
                     <ul class="list-inline">
                         
                         <li>
-                            <a href="https://twitter.com/anoncoinproject" class="btn-social btn-outline">
+                            <a href="https://twitter.com/atcoinproject" class="btn-social btn-outline">
                                 <i class="fa fa-fw fa-twitter"></i>
                             </a>
                         </li>
@@ -373,7 +373,7 @@
                         </li>
                         
                         <li>
-                            <a href="https://github.com/Atcoin/anoncoin" class="btn-social btn-outline">
+                            <a href="https://github.com/Atcoin/atcoin" class="btn-social btn-outline">
                                 <i class="fa fa-fw fa-github"></i>
                             </a>
                         </li>
@@ -383,7 +383,7 @@
                 <div class="footer-col col-md-4">
                     <h3>Chat with us</h3>
                     <p>
-                            <a href="https://join.slack.com/t/anoncoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU
+                            <a href="https://join.slack.com/t/atcoin/shared_invite/enQtMjcxMzUxMjk5ODYwLTU0OTJhNmIxNzYyY2JiMzUxOGZhMjYzNmQ3YmViNWM1OWIxZGNlMGY0Zjg1NzdhMDAyZmRiYTFhNTM1OWZiYTU
                             " class="btn btn-lg btn-outline">
                                 <i class="fa fa-slack"></i> Join our Slack
                             </a>

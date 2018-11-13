@@ -1,1 +1,1 @@
-Sitemap: https://anoncoin.net/sitemap.xml
+Sitemap: https://atcoin.net/sitemap.xml
